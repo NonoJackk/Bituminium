@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizacje | Infrastruktura i Budownictwo Drogowe</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+    <!-- Tailwind CSS -->
+     <!--<script src="https://cdn.tailwindcss.com"></script>--> 
+    <link rel="stylesheet" href="Assets/CSS/tailwind.css" />
+
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="Assets/CSS/all.min.css" />
+
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="Assets/CSS/fonts.css" />
+
+    <script src="Scripts/tailwind.js"></script>
+    <script src="Scripts/script.js" defer></script>
+    <script src="Scripts/gallery.js" defer></script>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-gradient-to-b from-white/80 to-transparent text-white py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="Assets/Images/logo.png"
+                     alt="Bituminium"
+                     class="h-8 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="about.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">O nas</a>
+                <a href="service.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Oferta</a>
+                <a href="lab.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Laboratorium</a>
+                <a href="gallery.html" class="text-brand-red font-bold transition shadow-black drop-shadow-md border-b-2 border-brand-red">Realizacje</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-red hover:bg-brand-darkRed rounded-full transition text-white shadow-lg">Kontakt</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars transition-transform duration-300"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden bg-white/90 backdrop-blur-md rounded-t-2xl rounded-b-2xl w-full absolute top-full left-0 border-t border-b border-gray-200 transition-all duration-300 ease-in-out opacity-0 invisible -translate-y-4 shadow-xl">
+            <div id="mobile-menu-inner" class="flex flex-col px-6 py-4 space-y-4 text-brand-black">
+                <a href="about.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">O nas</a>
+                <a href="service.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Oferta</a>
+                <a href="lab.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Laboratorium</a>
+                <a href="gallery.html" class="block px-6 py-4 text-lg rounded-2xl text-brand-red font-bold bg-gray-100 transition">Realizacje</a>
+                <a href="contact.html" class="block px-6 py-4 text-lg rounded-2xl text-white bg-brand-red font-bold text-center mt-2 transition shadow-md">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[45vh] md:h-[55vh] flex items-center justify-center text-center px-6 overflow-hidden md:mt-0">
+        <div class="absolute inset-0 w-full h-full z-0">
+            <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=2000&auto=format&fit=crop"
+                 class="object-cover w-full h-full" alt="Świeżo położony asfalt na drodze">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/70 z-10"></div>
+        </div>
+
+        <div class="max-w-4xl text-white fade-in-section relative z-20 md:pt-16">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-xl">
+                Nasze <span class="text-brand-red">Realizacje</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md font-light">
+                Od lokalnych dróg gminnych po strategiczne obiekty infrastrukturalne. Zobacz wybrane projekty z zakresu nawierzchni bitumicznych i betonowych.
+            </p>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+
+            <!-- Filters (Optional visual element) -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16 fade-in-section" id="portfolio-filters">
+                <button data-filter="all" class="filter-btn px-6 py-2 bg-brand-black text-white rounded-full font-medium text-sm transition shadow-md">Wszystkie</button>
+                <button data-filter="asfalt" class="filter-btn px-6 py-2 bg-white text-gray-600 border border-gray-200 hover:border-brand-red hover:text-brand-red rounded-full font-medium text-sm transition shadow-sm">Asfalt</button>
+                <button data-filter="beton" class="filter-btn px-6 py-2 bg-white text-gray-600 border border-gray-200 hover:border-brand-red hover:text-brand-red rounded-full font-medium text-sm transition shadow-sm">Beton</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 fade-in-section cursor-pointer" data-category="asfalt" onclick="openGalleryModal(1)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Assets/Images/budowa.jpg" alt="Przebudowa drogi" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300"></div>
+                        <div class="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            2025
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="absolute -top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-brand-red text-xl">
+                            <i class="fa-solid fa-road"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-red transition">Rozbudowa drogi krajowej nr 22</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-4 gap-2 font-medium">
+                            <i class="fa-solid fa-location-dot"></i> Czarlin - Knybawa
+                        </div>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
+                            <span class="text-sm font-semibold text-gray-800">Mieszanki Asfaltowe</span>
+                            <span class="text-brand-red font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Galeria <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 fade-in-section delay-100 cursor-pointer" data-category="beton" onclick="openGalleryModal(2)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Assets/Images/budowa.jpg" alt="Prace betonowe" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300"></div>
+                        <div class="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            2024
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="absolute -top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-brand-red text-xl">
+                            <i class="fa-solid fa-cubes"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-red transition">Nowy odcinek ul. Karnowskiego</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-4 gap-2 font-medium">
+                            <i class="fa-solid fa-location-dot"></i> Wejherowo
+                        </div>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
+                            <span class="text-sm font-semibold text-gray-800">Beton Konstrukcyjny</span>
+                            <span class="text-brand-red font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Galeria <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 fade-in-section delay-200 cursor-pointer" data-category="asfalt beton" onclick="openGalleryModal(3)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Assets/Images/budowa.jpg" alt="Węzeł drogowy" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300"></div>
+                        <div class="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            2024
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="absolute -top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-brand-red text-xl">
+                            <i class="fa-solid fa-bridge"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-red transition">Realizacja rozbudowy ul. Kartuskiej</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-4 gap-2 font-medium">
+                            <i class="fa-solid fa-location-dot"></i> Gdańsk
+                        </div>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
+                            <span class="text-sm font-semibold text-gray-800">Infrastruktura Specjalna</span>
+                            <span class="text-brand-red font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Galeria <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 fade-in-section cursor-pointer" data-category="asfalt" onclick="openGalleryModal(4)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Assets/Images/budowa.jpg" alt="Przemysłowa produkcja" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300"></div>
+                        <div class="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            2023
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="absolute -top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-brand-red text-xl">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-red transition">Rozbudowa drogi powiatowej</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-4 gap-2 font-medium">
+                            <i class="fa-solid fa-location-dot"></i> Chmielno – Lipowiec
+                        </div>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
+                            <span class="text-sm font-semibold text-gray-800">Dostawa MMA</span>
+                            <span class="text-brand-red font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Galeria <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 fade-in-section delay-100 cursor-pointer" data-category="beton" onclick="openGalleryModal(5)">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Assets/Images/budowa.jpg" alt="Układanie kostki" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-300"></div>
+                        <div class="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            2025
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <div class="absolute -top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-brand-red text-xl">
+                            <i class="fa-solid fa-tree-city"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-brand-red transition">Rozbudowa drogi powiatowej nr 1410G</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-4 gap-2 font-medium">
+                            <i class="fa-solid fa-location-dot"></i> Bolszewka
+                        </div>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
+                            <span class="text-sm font-semibold text-gray-800">Prace Brukarskie</span>
+                            <span class="text-brand-red font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Galeria <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA Zlecenie -->
+            <div class="mt-20 bg-brand-black rounded-2xl p-10 text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+                <div class="relative z-10">
+                    <h3 class="text-3xl font-bold text-white mb-4">Twój projekt może być następny</h3>
+                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Poszukujesz solidnego wykonawcy robót drogowych lub sprawdzonego dostawcy materiałów? Skontaktuj się z naszym działem wycen.</p>
+                    <a href="contact.html" class="inline-block bg-brand-red hover:bg-brand-darkRed text-white font-bold py-4 px-10 rounded shadow-lg transition">Rozpocznijmy współpracę</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-8">
+
+                <div class="flex flex-col items-center md:items-start text-center md:text-left md:border-r border-gray-800 md:pr-8">
+                    <a href="index.html" class="inline-block mb-4 bg-white rounded-lg p-2">
+                        <img src="Assets/Images/logo.png" alt="Bituminium Sp. z o. o." class="h-8 w-auto object-contain" onerror="this.src='https://placehold.co/200x60/1a1a1a/ffffff?text=LOGO'">
+                    </a>
+                    <p class="text-gray-500 text-sm mb-6">Jakość. Technologia. Zaufanie.</p>
+
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <p class="font-bold text-gray-500 uppercase tracking-wider mb-2">Dane Rejestrowe</p>
+                        <p>Bituminium Sp. z o.o.</p>
+                        <p>ul. Długa 4B, 84-223 Linia</p>
+                        <p>NIP: 5882406987 &bull; REGON: 360164300</p>
+                        <p>KRS: 0000530836 &bull; Kapitał: 100 000 PLN</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start space-y-3 pt-2 md:border-r border-gray-800 md:px-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-1">Szybka Nawigacja</span>
+                    <a href="about.html" class="text-gray-400 hover:text-brand-red transition text-sm">O nas</a>
+                    <a href="service.html" class="text-gray-400 hover:text-brand-red transition text-sm">Oferta</a>
+                    <a href="lab.html" class="text-gray-400 hover:text-brand-red transition text-sm">Laboratorium</a>
+                    <a href="gallery.html" class="text-brand-red font-bold transition text-sm">Realizacje</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-brand-red transition text-sm">Kontakt</a>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end text-center md:text-right pt-2 md:pl-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-4">Kontakt do działów</span>
+
+                    <div class="space-y-4 mb-6 text-sm text-gray-400">
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Biuro Obsługi Klienta</strong>
+                            <a href="tel:+48500123456" class="hover:text-white transition">+48 500 123 456</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:biuro@budtech.pl" class="hover:text-white transition">biuro@budtech.pl</a>
+                        </div>
+
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Laboratorium</strong>
+                            <a href="tel:+48500123457" class="hover:text-white transition text-brand-red">+48 500 123 457</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:lab@budtech.pl" class="hover:text-white transition text-brand-red">lab@budtech.pl</a>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-6 mt-auto">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm flex flex-col items-center">
+                <p>&copy; 2026 Bituminium Linia. Wszelkie prawa zastrzeżone.</p>
+                <p class="mt-2 text-xs">Projekt i Realizacja - Konrad Grubba.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Modal for Gallery -->
+    <div id="gallery-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" onclick="if(event.target === this) closeGalleryModal()">
+
+        <!-- Modal Content Container -->
+        <div id="gallery-modal-content" class="bg-white rounded-2xl w-full max-w-6xl max-h-[95vh] flex flex-col lg:flex-row relative shadow-2xl transform scale-95 opacity-0 transition-all duration-300 overflow-hidden">
+
+            <!-- Close Button -->
+            <button onclick="closeGalleryModal()" class="absolute top-4 right-4 z-50 bg-white/80 hover:bg-brand-red hover:text-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center backdrop-blur shadow-md transition-all duration-200 text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Left Side: Images Section -->
+            <div class="w-full lg:w-[60%] bg-gray-100 flex flex-col p-4 lg:p-6 gap-4 border-b lg:border-b-0 lg:border-r border-gray-200">
+                <!-- Main Big Image -->
+                <div class="w-full h-64 sm:h-80 lg:h-[500px] rounded-xl overflow-hidden shadow-inner bg-black relative">
+                    <img id="gm-main-img" src="" class="w-full h-full object-cover transition-opacity duration-300 opacity-100" alt="Główne zdjęcie realizacji">
+                </div>
+                <!-- Thumbnails Container -->
+                <div id="gm-thumbnails" class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+                    <!-- Thumbnails injected via JS -->
+                </div>
+            </div>
+
+            <!-- Right Side: Text & Data Section -->
+            <div class="w-full lg:w-[40%] p-6 lg:p-8 overflow-y-auto bg-white flex flex-col">
+                <div class="flex items-center gap-3 mb-4">
+                    <span id="gm-year" class="inline-block px-3 py-1 bg-red-50 text-brand-red text-xs font-bold rounded-full uppercase tracking-widest border border-red-100">
+                        2025
+                    </span>
+                    <span id="gm-category" class="text-xs text-gray-500 font-semibold uppercase tracking-wide">
+                        Kategoria
+                    </span>
+                </div>
+
+                <h3 id="gm-title" class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">Tytuł Realizacji</h3>
+
+                <div class="flex items-center text-gray-600 mb-6 font-medium">
+                    <div class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-brand-black mr-3">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span id="gm-location">Lokalizacja</span>
+                </div>
+
+                <p id="gm-desc" class="text-gray-600 leading-relaxed mb-8">
+                    Opis realizacji...
+                </p>
+
+                <div class="bg-gray-50 rounded-xl p-5 border border-gray-100 mt-auto">
+                    <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-brand-red"></i> Szczegóły projektu:
+                    </h4>
+                    <ul id="gm-details" class="space-y-3 text-sm text-gray-700 font-medium">
+                        <!-- Details injected via JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,602 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastruktura i Budownictwo Drogowe | Jakość i Technologia</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+    <!-- Tailwind CSS (Styling Framework) -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="Assets/CSS/tailwind.css" />
+
+    <!-- Font Awesome (Icons) -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="Assets/CSS/all.min.css" />
+
+    <!-- Google Fonts (Modern, Technical Font) -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="Assets/CSS/fonts.css" />
+
+    <!-- Konfiguracja kolorów Tailwind -->
+    <script src="Scripts/tailwind.js"></script>
+
+    <script src="Scripts/script.js" defer></script>
+    <script src="Scripts/modal.js" defer></script>
+
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-gradient-to-b from-white/80 to-transparent text-white py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="Assets/Images/logo.png"
+                     alt="Bituminium"
+                     class="h-8 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="about.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">O nas</a>
+                <a href="service.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Oferta</a>
+                <a href="lab.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Laboratorium</a>
+                <a href="gallery.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Realizacje</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-red hover:bg-brand-darkRed rounded-full transition text-white shadow-lg">Kontakt</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars transition-transform duration-300"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden bg-white/90 backdrop-blur-md rounded-t-2xl rounded-b-2xl w-full absolute top-full left-0 border-t border-b border-gray-200 transition-all duration-300 ease-in-out opacity-0 invisible -translate-y-4 shadow-xl">
+            <div id="mobile-menu-inner" class="flex flex-col px-6 py-4 space-y-4 text-brand-black">
+                <a href="about.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">O nas</a>
+                <a href="service.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Oferta</a>
+                <a href="lab.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Laboratorium</a>
+                <a href="gallery.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Realizacje</a>
+                <a href="contact.html" class="block px-6 py-4 text-lg rounded-2xl text-white bg-brand-red font-bold text-center mt-2 transition shadow-md">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <header class="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+
+        <!-- Video Background -->
+        <div class="absolute inset-0 w-full h-full z-0">
+            <video autoplay muted loop playsinline class="object-cover w-full h-full">
+                <source src="Assets/Video/hero.mp4" type="video/mp4">
+                Twoja przeglądarka nie obsługuje wideo.
+            </video>
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+        </div>
+
+        <div class="max-w-4xl text-white fade-in-section relative z-20">
+            <p class="text-brand-red font-bold tracking-widest uppercase mb-4 text-sm md:text-base drop-shadow-lg">Gdańsk • Pomorze • Polska</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-xl">
+                Budujemy przyszłość na <span class="text-brand-red">solidnych</span> fundamentach
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto drop-shadow-md">
+                Produkcja mas bitumicznych, roboty drogowe i zaawansowane laboratorium.
+                Jakość potwierdzona nauką i doświadczeniem.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="service.html" class="px-8 py-4 bg-brand-red hover:bg-brand-darkRed text-white rounded font-semibold transition shadow-lg border border-transparent">
+                    Poznaj ofertę
+                </a>
+                <a href="contact.html" class="px-8 py-4 bg-transparent hover:bg-white hover:text-brand-black text-white border border-white rounded font-semibold transition backdrop-blur-sm">
+                    Zapytaj o wycenę
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white opacity-70 z-20">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- O Nas / Współpraca z PG -->
+    <section id="o-nas" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+
+                <!-- Left Column: Content & Action -->
+                <div class="lg:w-1/2 fade-in-section flex flex-col justify-center">
+                    <div class="inline-block bg-gray-100 text-brand-black px-3 py-1 rounded text-sm font-semibold mb-4 self-start">
+                        Technologia i Wiedza
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-brand-black">
+                        Partner Politechniki Gdańskiej
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Nie jesteśmy tylko wykonawcą. Jesteśmy <strong class="text-brand-black">technologicznym partnerem</strong>.
+                        Nasz proces produkcyjny to fuzja wieloletniej praktyki z <strong class="text-brand-black">naukowym know-how</strong>
+                        inżynierów <strong class="text-brand-black">Politechniki Gdańskiej</strong>.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Dzięki temu nasze mieszanki to <strong class="text-brand-black">gwarancja parametrów</strong> przewyższających rynkowe standardy.
+                        Łączymy <strong class="text-brand-black">laboratoryjną precyzję</strong> z rozmachem wykonawczym, zapewniając
+                        niespotykaną <strong class="text-brand-black">trwałość inwestycji</strong>.
+                    </p>
+
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center">
+                            <span class="text-brand-red mr-3"><i class="fa-solid fa-check-circle"></i></span>
+                            <span class="font-medium"><strong class="text-brand-black">Ponad 30 receptur</strong> optymalizowanych laboratoryjnie</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-brand-red mr-3"><i class="fa-solid fa-check-circle"></i></span>
+                            <span class="font-medium"><strong class="text-brand-black">Ciągły monitoring jakości</strong> (ZKP) na każdym etapie</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-brand-red mr-3"><i class="fa-solid fa-check-circle"></i></span>
+                            <span class="font-medium"><strong class="text-brand-black">Ponad 200 badań</strong> MMA rocznie</span>
+                        </li>
+                    </ul>
+
+                    <a href="about.html" class="group inline-flex items-center gap-3 text-brand-black font-bold text-lg hover:text-brand-red transition border-b-2 border-brand-red/10 hover:border-brand-red pb-1 self-start">
+                        Dowiedz się więcej
+                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition text-brand-red"></i>
+                    </a>
+                </div>
+
+                <!-- Right Column: Visual Only -->
+                <div class="lg:w-1/2 fade-in-section delay-100 flex flex-col items-center">
+
+                    <div class="relative w-full group cursor-pointer">
+                        <a href="about.html" class="block relative z-10 overflow-hidden rounded-lg shadow-2xl">
+                            <img src="Assets/Images/lab1.jpg"
+                                 alt="Inżynierowie w laboratorium"
+                                 class="w-full h-full object-cover transform transition duration-500 group-hover:scale-105 group-hover:brightness-90">
+
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/20">
+                                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-brand-red text-2xl shadow-xl transform scale-75 group-hover:scale-100 transition duration-300">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-red/10 border-2 border-brand-red/20 rounded z-0 hidden md:block"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta (DARK MODE SECTION) -->
+    <section id="oferta" class="py-20 relative bg-brand-black overflow-hidden">
+
+        <!-- Dark Textured Background -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <!-- Ciemna tekstura asfaltu/betonu z niskim opacity -->
+            <img src="Assets/Images/asfalt.jpg"
+                 class="w-full h-full object-cover opacity-[0.15] grayscale"
+                 alt="Tekstura tła">
+            <!-- Winieta na krawędziach dla lepszego efektu -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-80"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in-section">
+                <!-- Zmiana koloru tekstu na biały -->
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Zakres Działalności</h2>
+                <div class="w-20 h-1 bg-brand-red mx-auto"></div>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Kliknij w wybrany obszar, aby zobaczyć specyfikację technologiczną naszych usług.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Service 1: Asfalt -->
+                <div class="service-card bg-white rounded-lg shadow-xl border-0 overflow-hidden group fade-in-section" onclick="openServiceModal('asfalt')">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/Images/asfalt.jpg"
+                             alt="Otaczarnia mas bitumicznych"
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Produkcja Asfaltu</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Nowoczesna otaczarnia w Gdańsku. Produkujemy wysokiej jakości mieszanki mineralno-asfaltowe dla dróg każdej kategorii.
+                        </p>
+                        <div class="text-brand-red text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Więcej <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Nawierzchnie -->
+                <div class="service-card bg-white rounded-lg shadow-xl border-0 overflow-hidden group fade-in-section delay-100" onclick="openServiceModal('nawierzchnie')">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/Images/MMA.jpg"
+                             alt="Rozściełacz asfaltu przy pracy"
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Układanie Nawierzchni</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Specjalistyczne brygady bitumiczne. Realizujemy autostrady, drogi lokalne oraz place manewrowe z użyciem nowoczesnego sprzętu.
+                        </p>
+                        <div class="text-brand-red text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Więcej <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Kruszywa -->
+                <div class="service-card bg-white rounded-lg shadow-xl border-0 overflow-hidden group fade-in-section delay-200" onclick="openServiceModal('kruszywa')">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/Images/zwirownia.jpg"
+                             alt="Kruszywo budowlane"
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Eksploatacja Kruszyw</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Własne kopalnie. Wydobycie i uszlachetnianie kruszyw drogowych i budowlanych spełniających normy PN-EN.
+                        </p>
+                        <div class="text-brand-red text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Więcej <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Beton -->
+                <div class="service-card bg-white rounded-lg shadow-xl border-0 overflow-hidden group fade-in-section" onclick="openServiceModal('beton')">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/Images/beton.jpg"
+                             alt="Betonowóz na budowie"
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Mieszanki Betonowe</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Produkcja betonu towarowego, drogowego i konstrukcyjnego. Gwarancja wytrzymałości i stabilności parametrów.
+                        </p>
+                        <div class="text-brand-red text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Więcej <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Bruk -->
+                <div class="service-card bg-white rounded-lg shadow-xl border-0 overflow-hidden group fade-in-section delay-100" onclick="openServiceModal('bruk')">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/Images/bruk.jpg"
+                             alt="Układanie kostki brukowej"
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-brand-black">Brygady Brukarskie</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Profesjonalne układanie kostki brukowej. Place, chodniki, parkingi – estetyka i funkcjonalność w jednym.
+                        </p>
+                        <div class="text-brand-red text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
+                            Więcej <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 6: Lab (Dark on Dark, but with border/shadow pop) -->
+                <div class="service-card bg-neutral-800 text-white rounded-lg shadow-xl border border-neutral-700 overflow-hidden group fade-in-section delay-200 relative" onclick="openServiceModal('lab')">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="Assets/Images/lab.jpg"
+                             alt="Laboratorium badawcze"
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 opacity-60 group-hover:opacity-80">
+                        <div class="absolute top-0 right-0 p-4 opacity-50 text-white text-3xl z-10">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                    </div>
+
+                    <div class="p-6 relative z-10">
+                        <h3 class="text-xl font-bold mb-3">Laboratorium Drogowe</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Oferujemy zewnętrzne badania mieszanek mineralno-asfaltowych i kruszyw. Certyfikowane raporty i analizy eksperckie.
+                        </p>
+                        <div class="inline-block text-brand-red font-semibold hover:text-white transition cursor-pointer flex items-center gap-1 group-hover:gap-2">
+                            Więcej <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Laboratorium Detail Section -->
+    <section id="laboratorium" class="py-20 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between bg-gray-900 text-white rounded-2xl p-8 md:p-12 shadow-2xl gap-12">
+
+                <!-- Left Column: Content + CTA -->
+                <div class="lg:w-1/2 flex flex-col items-start">
+                    <h2 class="text-3xl font-bold mb-4">Potrzebujesz badań laboratoryjnych?</h2>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        Nasze laboratorium nie tylko kontroluje naszą produkcję. Świadczymy usługi zewnętrzne dla inwestorów i wykonawców.
+                        Badania zagęszczenia, składu mieszanek, mrozoodporności i więcej.
+                    </p>
+
+                    <a href="contact.html" class="bg-brand-red hover:bg-white hover:text-brand-red text-white px-8 py-4 rounded-lg font-bold transition text-center shadow-lg mb-8 inline-block">
+                        Zamów badania
+                    </a>
+
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-800 rounded-full text-xs font-semibold border border-gray-700 uppercase tracking-wide">Normy PN-EN</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full text-xs font-semibold border border-gray-700 uppercase tracking-wide">Sprzęt klasy premium</span>
+                        <span class="px-4 py-2 bg-gray-800 rounded-full text-xs font-semibold border border-gray-700 uppercase tracking-wide">Wsparcie PG</span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Only (Image) -->
+                <div class="lg:w-1/2 w-full flex justify-center lg:justify-end">
+                    <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=1000&auto=format&fit=crop"
+                         alt="Precyzyjny sprzęt laboratoryjny"
+                         class="rounded-lg shadow-2xl border border-gray-700 w-full object-cover h-64 md:h-80 lg:h-96 transform hover:scale-[1.02] transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dlaczego My? (Numbers/Stats) -->
+    <section class="py-16 bg-brand-red text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-5xl font-bold mb-2">100%</div>
+                    <div class="text-red-200">Polski Kapitał</div>
+                </div>
+                <div class="p-4 border-l-0 md:border-l border-red-500 border-r-0 md:border-r">
+                    <div class="text-5xl font-bold mb-2">30+</div>
+                    <div class="text-red-200">Lat Doświadczenia</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-5xl font-bold mb-2"><i class="fa-solid fa-check"></i></div>
+                    <div class="text-red-200">Gwarancja Jakości</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logotypy Partnerów -->
+    <section class="py-12 bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-6">
+            <h3 class="text-center text-gray-400 font-semibold uppercase tracking-widest text-sm mb-8">Zaufali nam</h3>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+
+                <div class="partner-logo flex flex-col items-center">
+                    <div class="text-3xl text-gray-700 mb-1"><i class="fa-solid fa-crown"></i></div>
+                    <span class="font-bold text-gray-600">GMINA WEJHEROWO</span>
+                </div>
+
+                <div class="partner-logo flex flex-col items-center">
+                    <div class="text-3xl text-gray-700 mb-1"><i class="fa-solid fa-landmark"></i></div>
+                    <span class="font-bold text-gray-600">MIASTO GDAŃSK</span>
+                </div>
+
+                <div class="partner-logo flex flex-col items-center">
+                    <div class="text-3xl text-gray-700 mb-1"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <span class="font-bold text-gray-600">PG GDAŃSK</span>
+                </div>
+
+                <div class="partner-logo">
+                    <span class="text-2xl font-black text-gray-700 tracking-tighter">GDDKiA</span>
+                </div>
+
+                <div class="partner-logo">
+                    <span class="text-xl font-extrabold text-gray-600 tracking-wide">STRABAG</span>
+                </div>
+
+                <div class="partner-logo">
+                    <span class="text-xl font-bold text-gray-600 italic">BUDIMEX</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-brand-black mb-4">Skontaktuj się z nami</h2>
+                <p class="text-gray-600">Zapraszamy do współpracy przy inwestycjach w Gdańsku i okolicach.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
+                <div class="lg:w-1/3 space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-brand-red text-white rounded flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg">Siedziba i Otaczarnia</h3>
+                            <p class="text-gray-600">ul. Przemysłowa 55<br>80-001 Gdańsk</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-brand-black text-white rounded flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg">Dział Sprzedaży</h3>
+                            <p class="text-gray-600">+48 500 123 456<br>Pon-Pt: 7:00 - 16:00</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-brand-black text-white rounded flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg">Email</h3>
+                            <p class="text-gray-600">biuro@budtech-gdansk.pl<br>lab@budtech-gdansk.pl</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-2/3 bg-white p-8 rounded-lg shadow-lg">
+                    <form onsubmit="event.preventDefault(); alert('Wiadomość została wysłana (symulacja).');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Imię i Nazwisko</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition" placeholder="Jan Kowalski">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Telefon</label>
+                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition" placeholder="+48 ...">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Temat</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-brand-red transition">
+                                <option>Zapytanie o Mieszanki Asfaltowe</option>
+                                <option>Usługi Brukarskie</option>
+                                <option>Laboratorium</option>
+                                <option>Kruszywa</option>
+                                <option>Inne</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Wiadomość</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-brand-red focus:ring-1 focus:ring-brand-red transition" placeholder="Opisz swoje zapotrzebowanie..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-red hover:bg-brand-darkRed text-white font-bold py-4 rounded transition shadow-md">
+                            Wyślij Wiadomość
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-8">
+
+                <div class="flex flex-col items-center md:items-start text-center md:text-left md:border-r border-gray-800 md:pr-8">
+                    <a href="index.html" class="inline-block mb-2 bg-white rounded-lg p-2">
+                        <img src="Assets/Images/logo.png" alt="Bituminium Sp. z o. o." class="h-8 w-auto object-contain">
+                    </a>
+                    <p class="text-gray-500 text-sm mb-6">Jakość. Technologia. Zaufanie.</p>
+
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <p class="font-bold text-gray-500 uppercase tracking-wider mb-2">Dane Rejestrowe</p>
+                        <p>Bituminium Sp. z o.o.</p>
+                        <p>ul. Długa 4B, 84-223 Linia</p>
+                        <p>NIP: 5882406987 &bull; REGON: 360164300</p>
+                        <p>KRS: 0000530836 &bull; Kapitał: 100 000 PLN</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start space-y-3 pt-2 md:border-r border-gray-800 md:px-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-1">Szybka Nawigacja</span>
+                    <a href="about.html" class="text-gray-400 hover:text-brand-red transition text-sm">O nas</a>
+                    <a href="service.html" class="text-gray-400 hover:text-brand-red transition text-sm">Oferta</a>
+                    <a href="lab.html" class="text-gray-400 hover:text-brand-red transition text-sm">Laboratorium</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-brand-red transition text-sm">Kontakt</a>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end text-center md:text-right pt-2 md:pl-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-4">Kontakt do działów</span>
+
+                    <div class="space-y-4 mb-6 text-sm text-gray-400">
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Biuro Obsługi Klienta</strong>
+                            <a href="tel:+48500123456" class="hover:text-white transition">+48 500 123 456</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:biuro@budtech.pl" class="hover:text-white transition">biuro@budtech.pl</a>
+                        </div>
+
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Laboratorium</strong>
+                            <a href="tel:+48500123457" class="hover:text-white transition">+48 500 123 457</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:lab@budtech.pl" class="hover:text-white transition">lab@budtech.pl</a>
+                        </div>
+
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Dział Kadr (Rekrutacja)</strong>
+                            <a href="tel:+48500123458" class="hover:text-white transition">+48 500 123 458</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:kariera@budtech.pl" class="hover:text-white transition">kariera@budtech.pl</a>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-6 mt-auto">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2026 Bituminium Linia. Wszelkie prawa zastrzeżone. <br>
+                Projekt i Realizacja - Konrad Grubba.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Details Modal -->
+    <div id="service-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden" onclick="if(event.target === this) closeServiceModal()">
+        <div id="modal-content" class="bg-white rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl relative flex flex-col">
+
+            <!-- Sticky Header -->
+            <div class="sticky top-0 bg-white border-b border-gray-100 p-6 flex justify-between items-center z-20 rounded-t-2xl">
+                <div class="flex items-center gap-4">
+                    <div id="modal-icon" class="w-12 h-12 bg-red-50 text-brand-red rounded-full flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+                    <h3 id="modal-title" class="text-2xl font-bold text-gray-900">Tytuł Usługi</h3>
+                </div>
+                <button onclick="closeServiceModal()" class="text-gray-400 hover:text-gray-600 transition p-2 text-2xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Scrollable Content -->
+            <div class="p-8 overflow-y-auto flex-1">
+                <!-- Main Image Section -->
+                <div class="mb-3 rounded-xl overflow-hidden h-64 shadow-md bg-gray-100 relative group">
+                    <img id="modal-main-image" src="" alt="Zdjęcie główne" class="w-full h-full object-cover transition-opacity duration-300">
+                    <div class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded backdrop-blur-sm pointer-events-none">
+                        Główny widok
+                    </div>
+                </div>
+
+                <!-- Gallery Section (Moved Up & Compacted) -->
+                <div id="modal-gallery" class="grid grid-cols-4 sm:grid-cols-5 gap-2 mb-6">
+                    <!-- Images will be injected here via JS -->
+                </div>
+
+                <p id="modal-description" class="text-gray-600 leading-relaxed mb-6">Opis usługi...</p>
+
+                <h4 class="font-bold text-lg mb-4 text-brand-black">Specyfikacja i Możliwości:</h4>
+                <ul id="modal-features" class="space-y-3 mb-8"></ul>
+
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <h4 class="font-bold text-sm uppercase tracking-wide text-gray-500 mb-3">Dlaczego my?</h4>
+                    <p id="modal-highlight" class="font-medium text-brand-black">Wyróżnik...</p>
+                </div>
+            </div>
+
+            <!-- Sticky Footer -->
+            <div class="p-6 bg-gray-50 border-t border-gray-100 flex justify-end gap-3 sticky bottom-0 rounded-b-2xl z-20">
+                <button onclick="closeServiceModal()" class="px-6 py-2.5 text-gray-600 hover:bg-gray-200 rounded-lg transition font-medium">Zamknij</button>
+                <!-- Zmodyfikowany przycisk z ID -->
+                <a id="modal-cta-btn" href="#" class="px-6 py-2.5 bg-brand-red hover:bg-brand-darkRed text-white rounded-lg transition font-medium shadow-md flex items-center gap-2">
+                    Zobacz więcej <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

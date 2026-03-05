@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorium Drogowe | Infrastruktura i Budownictwo Drogowe</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+    <!-- Tailwind CSS -->
+     <!--<script src="https://cdn.tailwindcss.com"></script>--> 
+    <link rel="stylesheet" href="Assets/CSS/tailwind.css" />
+
+    <!-- Font Awesome -->
+     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">--> 
+    <link rel="stylesheet" href="Assets/CSS/all.min.css" />
+
+    <!-- Google Fonts -->
+     <!--<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">--> 
+    <link rel="stylesheet" href="Assets/CSS/fonts.css" />
+
+    <script src="Scripts/tailwind.js"></script>
+    <script src="Scripts/script.js" defer></script>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-gradient-to-b from-white/80 to-transparent text-white py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="Assets/Images/logo.png"
+                     alt="Bituminium"
+                     class="h-8 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="about.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">O nas</a>
+                <a href="service.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Oferta</a>
+                <a href="lab.html" class="text-brand-red font-bold transition shadow-black drop-shadow-md border-b-2 border-brand-red">Laboratorium</a>
+                <a href="gallery.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Realizacje</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-red hover:bg-brand-darkRed rounded-full transition text-white shadow-lg">Kontakt</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars transition-transform duration-300"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden bg-white/90 backdrop-blur-md rounded-t-2xl rounded-b-2xl w-full absolute top-full left-0 border-t border-b border-gray-200 transition-all duration-300 ease-in-out opacity-0 invisible -translate-y-4 shadow-xl">
+            <div id="mobile-menu-inner" class="flex flex-col px-6 py-4 space-y-4 text-brand-black">
+                <a href="about.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">O nas</a>
+                <a href="service.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Oferta</a>
+                <a href="lab.html" class="block px-6 py-4 text-lg rounded-2xl text-brand-red font-bold bg-gray-100 transition">Laboratorium</a>
+                <a href="gallery.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Realizacje</a>
+                <a href="contact.html" class="block px-6 py-4 text-lg rounded-2xl text-white bg-brand-red font-bold text-center mt-2 transition shadow-md">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Static Image for Subpage) -->
+    <header class="relative h-[50vh] md:h-[60vh] flex items-center justify-center text-center px-6 overflow-hidden  md:mt-0">
+        <div class="absolute inset-0 w-full h-full z-0">
+            <img src="Assets/Images/lab.jpg"
+                 class="object-cover w-full h-full" alt="Wnętrze nowoczesnego laboratorium">
+            <div class="absolute inset-0 bg-black/70 z-10"></div>
+        </div>
+
+        <div class="max-w-4xl text-white fade-in-section relative z-20 md:pt-20">
+            <div class="inline-block bg-brand-red text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                Jakość i Precyzja
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-xl">
+                Laboratorium Drogowe
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
+                Zaawansowana diagnostyka materiałów budowlanych. Innowacje tworzone we współpracy ze światem nauki.
+            </p>
+        </div>
+    </header>
+
+    <!-- Współpraca z Politechniką & R&D -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Left: Content -->
+                <div class="lg:w-1/2 fade-in-section">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-brand-black">
+                        Nauka w służbie drogom
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Nasze laboratorium to serce kontroli jakości i działu R&D (Research & Development). Stawiamy na bezkompromisową precyzję, dlatego stale współpracujemy ze specjalistami z <strong>Politechniki Gdańskiej</strong>.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        W ciągu roku wykonujemy <strong>ponad 200</strong> pełnych badań mma oraz bieżące badania materiałów wsadowych zgodnie z planem systemu ZKP.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Wspólne projekty badawcze pozwalają nam optymalizować receptury mas bitumicznych (MMA) oraz wprowadzać innowacyjne technologie, takie jak asfalty modyfikowane czy mieszanki z użyciem destruktu (RAP), które są bardziej ekologiczne i trwałe.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-red shadow-sm">
+                            <i class="fa-solid fa-graduation-cap text-brand-red text-3xl mb-4"></i>
+                            <h4 class="font-bold text-gray-900 mb-2">Transfer Wiedzy</h4>
+                            <p class="text-sm text-gray-600">Konsultacje z ekspertami PG przy najbardziej wymagających inwestycjach.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-brand-black shadow-sm">
+                            <i class="fa-solid fa-microscope text-brand-black text-3xl mb-4"></i>
+                            <h4 class="font-bold text-gray-900 mb-2">Sprzęt Premium</h4>
+                            <p class="text-sm text-gray-600">Cyfrowe prasy, wstrząsarki i sprzęt zgodny z najnowszymi normami PN-EN.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Image -->
+                <div class="lg:w-1/2 fade-in-section delay-100">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="Assets/Images/lab1.jpg"
+                             alt="Ekspert analizujący próbki w laboratorium"
+                             class="w-full h-auto object-cover">
+                        <!-- Badge -->
+                        <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-gray-100">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brand-red text-white flex items-center justify-center rounded-full text-xl font-bold">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 font-bold uppercase">Certyfikacja</p>
+                                    <p class="text-brand-black font-bold">ZKP / PN-EN</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zakres Badań (Grid) -->
+    <section class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-black mb-4">Zakres Wykonywanych Badań</h2>
+                <div class="w-20 h-1 bg-brand-red mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Oferujemy kompleksowe badania kruszyw, gruntów oraz mieszanek mineralno-asfaltowych. Zapewniamy pełen cykl od projektowania receptur po diagnostykę terenową.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 fade-in-section group">
+                    <div class="w-14 h-14 bg-red-50 text-brand-red rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-vial"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-black">Mieszanki Asfaltowe (MMA)</h3>
+                    <ul class="text-gray-600 text-sm space-y-2 mb-6">
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Ekstrakcja lepiszcza i skład ziarnowy</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Gęstość objętościowa i parametry wolumetryczne</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Odporność na koleinowanie</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Wrażliwość na działanie wody (ITSR)</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 fade-in-section delay-100 group">
+                    <div class="w-14 h-14 bg-red-50 text-brand-red rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-cubes-stacked"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-black">Kruszywa i Grunty</h3>
+                    <ul class="text-gray-600 text-sm space-y-2 mb-6">
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Analiza sitowa (uziarnienie)</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Wskaźnik kształtu i płaskości</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Wilgotność i nasiąkliwość</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Oznaczanie wskaźnika piaskowego</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 fade-in-section delay-200 group">
+                    <div class="w-14 h-14 bg-red-50 text-brand-red rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-road-spikes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-black">Badania Polowe</h3>
+                    <ul class="text-gray-600 text-sm space-y-2 mb-6">
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Odwierty rdzeniowe nawierzchni</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Badanie nośności płytą VSS</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Badanie płytą dynamiczną (VDG)</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-red mr-2"></i> Sondowania zagęszczenia gruntu</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 fade-in-section group">
+                    <div class="w-14 h-14 bg-red-50 text-brand-red rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-black">Projektowanie Receptur</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Opracowujemy innowacyjne receptury (Typu (IT)T) dopasowane do specyficznych wymagań inwestora i kategorii obciążenia ruchem (KR).
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 fade-in-section delay-100 group">
+                    <div class="w-14 h-14 bg-red-50 text-brand-red rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-black">Certyfikacja i Nadzór</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Wdrażamy systemy Zakładowej Kontroli Produkcji (ZKP) oraz oferujemy stały nadzór laboratoryjny na placach budowy.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Usługi Zewnętrzne (Dark B2B Section) -->
+    <section class="py-20 bg-brand-black text-white relative overflow-hidden">
+        <!-- Abstract background pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2 fade-in-section">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Outsourcing Laboratoryjny dla B2B</h2>
+                    <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                        Nasze kompetencje i sprzęt udostępniamy na zewnątrz. Wykonujemy niezależne ekspertyzy, badania kontrolne i arbitrażowe dla inwestorów prywatnych, wykonawców oraz samorządów (współpracowaliśmy m.in. z Gminą Wejherowo).
+                    </p>
+                    <ul class="space-y-4 text-gray-400 mb-8">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-red mr-3"></i> Niezależne raporty z badań</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-red mr-3"></i> Gwarancja zachowania poufności</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-red mr-3"></i> Konkurencyjne ceny i szybki czas realizacji</li>
+                    </ul>
+                    <a href="contact.html" class="inline-block bg-brand-red hover:bg-brand-darkRed text-white px-8 py-4 rounded font-bold transition shadow-[0_0_20px_rgba(220,38,38,0.4)] mb-8">
+                        Skontaktuj się z kierownikiem laboratorium
+                    </a>
+
+                    <!-- Dodane bezpośrednie dane kontaktowe -->
+                    <div class="flex flex-col sm:flex-row gap-6 text-gray-300 pt-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-brand-red">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Telefon</p>
+                                <a href="tel:+48500123457" class="font-medium hover:text-white transition">+48 500 123 457</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-brand-red">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">E-mail</p>
+                                <a href="mailto:lab@budtech.pl" class="font-medium hover:text-white transition">lab@budtech.pl</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zaktualizowana prawa kolumna (Zdjęcia) - powiększona przestrzeń i kompozycja z dwóch fotografii -->
+                <div class="lg:w-1/2 fade-in-section delay-100 flex justify-center lg:justify-end relative mt-16 lg:mt-0 w-full">
+                    <div class="relative w-full max-w-lg lg:max-w-none">
+                        <!-- Główne, duże zdjęcie bazowe -->
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+                             alt="Współpraca B2B w laboratorium"
+                             class="w-full lg:w-4/5 ml-auto rounded-2xl shadow-2xl border border-gray-700 object-cover relative z-10">
+
+                        <!-- Mniejsze, nachodzące zdjęcie z akcentem na rozmowy/biznes -->
+                        <img src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=600&auto=format&fit=crop"
+                             alt="Omawianie wyników badań B2B"
+                             class="absolute -bottom-10 -left-4 lg:left-0 w-3/5 max-w-[280px] rounded-2xl shadow-2xl border-8 border-brand-black object-cover z-20 hidden sm:block">
+
+                        <!-- Dekoracyjny element blasku wzbogacający sekcję w kolorach marki -->
+                        <div class="absolute -top-6 right-10 w-32 h-32 bg-brand-red rounded-full mix-blend-overlay filter blur-2xl opacity-40 z-0 pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-8">
+
+                <div class="flex flex-col items-center md:items-start text-center md:text-left md:border-r border-gray-800 md:pr-8">
+                    <a href="index.html" class="inline-block mb-4 bg-white rounded-lg p-2">
+                        <img src="Assets/Images/logo.png" alt="Bituminium Sp. z o. o." class="h-8 w-auto object-contain" onerror="this.src='https://placehold.co/200x60/1a1a1a/ffffff?text=LOGO'">
+                    </a>
+                    <p class="text-gray-500 text-sm mb-6">Jakość. Technologia. Zaufanie.</p>
+
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <p class="font-bold text-gray-500 uppercase tracking-wider mb-2">Dane Rejestrowe</p>
+                        <p>Bituminium Sp. z o.o.</p>
+                        <p>ul. Długa 4B, 84-223 Linia</p>
+                        <p>NIP: 5882406987 &bull; REGON: 360164300</p>
+                        <p>KRS: 0000530836 &bull; Kapitał: 100 000 PLN</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start space-y-3 pt-2 md:border-r border-gray-800 md:px-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-1">Szybka Nawigacja</span>
+                    <a href="about.html" class="text-gray-400 hover:text-brand-red transition text-sm">O nas</a>
+                    <a href="service.html" class="text-gray-400 hover:text-brand-red transition text-sm">Oferta</a>
+                    <a href="lab.html" class="text-brand-red transition text-sm font-bold">Laboratorium</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-brand-red transition text-sm">Kontakt</a>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end text-center md:text-right pt-2 md:pl-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-4">Kontakt do działów</span>
+
+                    <div class="space-y-4 mb-6 text-sm text-gray-400">
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Biuro Obsługi Klienta</strong>
+                            <a href="tel:+48500123456" class="hover:text-white transition">+48 500 123 456</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:biuro@budtech.pl" class="hover:text-white transition">biuro@budtech.pl</a>
+                        </div>
+
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Laboratorium</strong>
+                            <a href="tel:+48500123457" class="hover:text-white transition text-brand-red">+48 500 123 457</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:lab@budtech.pl" class="hover:text-white transition text-brand-red">lab@budtech.pl</a>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-6 mt-auto">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm flex flex-col items-center">
+                <p>&copy; 2026 Bituminium Linia. Wszelkie prawa zastrzeżone.</p>
+                <p class="mt-2 text-xs">Projekt i Realizacja - Konrad Grubba.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,614 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta | Infrastruktura i Budownictwo Drogowe</title>
+
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+     <!--<script src="https://cdn.tailwindcss.com"></script>--> 
+    <link rel="stylesheet" href="Assets/CSS/tailwind.css" />
+
+    <!-- Font Awesome (Icons) -->
+     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">--> 
+    <link rel="stylesheet" href="Assets/CSS/all.min.css" />
+
+    <!-- Google Fonts (Modern, Technical Font) -->
+     <!--<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">--> 
+    <link rel="stylesheet" href="Assets/CSS/fonts.css" />
+
+    <script src="Scripts/tailwind.js"></script>
+    <script src="Scripts/script.js" defer></script>
+    <script src="Scripts/modal.js" defer></script>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-gradient-to-b from-white/80 to-transparent text-white py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="Assets/Images/logo.png" alt="Bituminium" class="h-8 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="about.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">O nas</a>
+                <a href="service.html" class="text-brand-red font-bold transition shadow-black drop-shadow-md border-b-2 border-brand-red">Oferta</a>
+                <a href="lab.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Laboratorium</a>
+                <a href="gallery.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Realizacje</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-red hover:bg-brand-darkRed rounded-full transition text-white shadow-lg">Kontakt</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none text-brand-black drop-shadow-md">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars transition-transform duration-300"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden bg-white/90 backdrop-blur-md rounded-t-2xl rounded-b-2xl w-full absolute top-full left-0 border-t border-b border-gray-200 transition-all duration-300 ease-in-out opacity-0 invisible -translate-y-4 shadow-xl">
+            <div id="mobile-menu-inner" class="flex flex-col px-6 py-4 space-y-4 text-brand-black">
+                <a href="about.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">O nas</a>
+                <a href="service.html" class="block px-6 py-4 text-lg rounded-2xl text-brand-red font-bold bg-gray-100 transition">Oferta</a>
+                <a href="lab.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Laboratorium</a>
+                <a href="gallery.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Realizacje</a>
+                <a href="contact.html" class="block px-6 py-4 text-lg rounded-2xl text-white bg-brand-red font-bold text-center mt-2 transition shadow-md">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Subpage Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center text-center px-6 overflow-hidden bg-brand-black">
+        <div class="absolute inset-0 w-full h-full z-0">
+            <img src="https://images.unsplash.com/photo-1584351583369-6baf055b51a7?q=80&w=2000&auto=format&fit=crop"
+                 alt=""
+                 class="object-cover w-full h-full opacity-30 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/70 to-transparent z-10"></div>
+        </div>
+
+        <div class="max-w-4xl text-white fade-in-section relative z-20">
+            <div class="inline-block bg-brand-red text-white px-4 py-1 rounded-full text-sm font-bold mb-6 tracking-wider uppercase shadow-lg">Pełen zakres działalności</div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-xl">
+                Kompleksowe <span class="text-brand-red">rozwiązania</span> drogowe
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md">
+                Od wydobycia kruszywa i projektowania autorskich receptur w laboratorium, przez rygorystyczną produkcję, aż po precyzyjne układanie nawierzchni w terenie.
+            </p>
+        </div>
+    </header>
+
+    <!-- Sekcja 1: Produkty (Asfalty i Betony) -->
+    <section class="py-20 bg-white" id="produkty">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-brand-red font-bold uppercase tracking-widest text-sm mb-2 block">Produkcja</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-black mb-4">Materiały Budowlane Najwyższej Klasy</h2>
+                <div class="w-20 h-1 bg-brand-red mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Nasze otaczarnie i węzły betoniarskie dostarczają 300 ton mieszanek na godzinę. Jakość każdego z nich poparta jest rygorystycznymi normami europejskimi oraz stałym nadzorem naukowym.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Asfalt Card -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-xl border border-gray-100 flex flex-col fade-in-section group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Assets/Images/MMA.jpg"
+                             alt=""
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                        <!-- Badges -->
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-brand-red text-white text-xs font-bold px-3 py-1.5 rounded shadow-lg backdrop-blur-sm">
+                                <i class="fa-solid fa-certificate mr-1"></i> Certyfikat ZKP
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 right-4 flex gap-2">
+                            <span class="bg-brand-black/90 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm border border-gray-600">
+                                <i class="fa-solid fa-book-open mr-1"></i> Ponad 30 receptur
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4 text-brand-black">Mieszanki Mineralno-Asfaltowe (MMA)</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed flex-1">
+                            Oferujemy asfalty dostosowane do każdej kategorii ruchu (od KR1 po autostradowe KR7). Receptury optymalizujemy m.in. dzięki bliskiej <strong>współpracy badawczej z Politechniką Gdańską (PG)</strong>, co pozwala nam weryfikować innowacyjne dodatki polimerowe.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-700 font-medium mb-8">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-red mt-0.5 mr-3 text-lg"></i> Betony asfaltowe (AC) do warstw wiążących i podbudowy</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-red mt-0.5 mr-3 text-lg"></i> Mieszanki SMA (Stone Mastic Asphalt) wysoce odporne na koleiny</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-red mt-0.5 mr-3 text-lg"></i> Cienkie warstwy ścieralne o redukcji hałasu (BBTM)</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-red mt-0.5 mr-3 text-lg"></i> Specjalistyczne nawierzchnie HiMA, JENA oraz mieszanki barwione</li>
+                        </ul>
+
+                        <!-- Przycisk pobierania certyfikatów (Asfalt) -->
+                        <div class="mt-auto border-t border-gray-200 pt-6">
+                            <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-brand-black rounded-lg font-medium transition duration-300 shadow-sm w-full justify-center group-hover:border-brand-red border border-transparent">
+                                <i class="fa-solid fa-download text-brand-red"></i> Pobierz specyfikacje i certyfikaty
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beton Card -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-xl border border-gray-100 flex flex-col fade-in-section delay-100 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Assets/Images/beton.jpg"
+                             alt=""
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                        <!-- Badges -->
+                        <div class="absolute top-4 left-4 flex flex-col gap-2">
+                            <span class="bg-brand-red text-white text-xs font-bold px-3 py-1.5 rounded shadow-lg backdrop-blur-sm">
+                                <i class="fa-solid fa-certificate mr-1"></i> Certyfikat ZKP
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 right-4 flex gap-2">
+                            <span class="bg-gray-100 text-brand-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border border-gray-300">
+                                <i class="fa-solid fa-truck-fast mr-1"></i> Flota 20 betonomieszarek
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4 text-brand-black">Betony Towarowe i Drogowe</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed flex-1">
+                            Nasze zautomatyzowane węzły gwarantują jednorodność i powtarzalność każdej partii. Posiadamy certyfikację na betony o ekstremalnych parametrach wytrzymałościowych oraz mrozoodpornych, niezbędnych w infrastrukturze publicznej.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-700 font-medium mb-8">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-red mt-0.5 mr-3 text-lg"></i> Betony konstrukcyjne i fundamentowe w klasach od C8/10 do C50/60</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-red mt-0.5 mr-3 text-lg"></i> Certyfikowane betony drogowe i mostowe (odporne na sól F150, F200)</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-red mt-0.5 mr-3 text-lg"></i> Stabilizacje podłoża gruntowego (CBGM)</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-brand-red mt-0.5 mr-3 text-lg"></i> Specjalistyczne zaprawy i wylewki posadzkowe</li>
+                        </ul>
+
+                        <!-- Przycisk pobierania certyfikatów (Beton) -->
+                        <div class="mt-auto border-t border-gray-200 pt-6">
+                            <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-brand-black rounded-lg font-medium transition duration-300 shadow-sm w-full justify-center group-hover:border-brand-red border border-transparent">
+                                <i class="fa-solid fa-download text-brand-red"></i> Pobierz specyfikacje i certyfikaty
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informacje kontaktowe do zamówień -->
+            <div class="mt-16 bg-gray-50 border border-gray-200 rounded-2xl p-8 md:p-12 shadow-md fade-in-section delay-200 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-brand-black mb-2">Dział Sprzedaży i Wytwórni</h3>
+
+                    <div class="flex flex-col sm:flex-row gap-6 mb-2">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="block text-sm text-gray-500 font-semibold uppercase tracking-wider">Telefon</span>
+                                <a href="tel:+48500123456" class="text-lg font-bold text-brand-black hover:text-brand-red transition">+48 500 123 456</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-sm text-gray-500 font-semibold uppercase tracking-wider">Email (Zamówienia)</span>
+                                <a href="mailto:zamowienia@budtech-gdansk.pl" class="text-lg font-bold text-brand-black hover:text-brand-red transition">zamowienia@budtech-gdansk.pl</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-auto w-full flex justify-center md:justify-end border-t md:border-t-0 md:border-l border-gray-200 pt-8 md:pt-0 md:pl-8">
+                    <a href="contact.html" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-black hover:bg-gray-800 text-white rounded-lg font-bold transition shadow-xl hover:-translate-y-1 w-full md:w-auto">
+                        <i class="fa-solid fa-paper-plane text-brand-red"></i> Formularz kontaktowy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja 2: Kruszywa -->
+    <section class="py-20 relative bg-brand-black text-white overflow-hidden" id="kruszywa">
+        <!-- Background Texture -->
+        <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+            <img src="Assets/Images/gravel.jpg"
+                 class="w-full h-full object-cover grayscale"
+                 alt="">
+        </div>
+
+        <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent z-10"></div>
+
+        <div class="container mx-auto px-6 relative z-20">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-brand-red font-bold uppercase tracking-widest text-sm mb-2 block">Prywatna Żwirownia</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Własne Kopalnie Kruszyw</h2>
+                <div class="w-20 h-1 bg-brand-red mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    Eksploatujemy bogate złoża na Pomorzu. Zaawansowane technologicznie linie przesiewająco-płuczące produkują czyste, wyselekcjonowane frakcje dla naszej produkcji i na sprzedaż hurtową.
+                </p>
+            </div>
+
+            <!-- Grid Kruszyw -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Rodzaj 1 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 fade-in-section group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/Images/sand.jpg"
+                             alt=""
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold text-white mb-1">Piaski</h4>
+                        <span class="text-brand-red font-black text-lg block mb-3 border-b border-white/10 pb-3">Frakcja 0-3 mm</span>
+                        <p class="text-gray-400 text-sm">
+                            Piasek siany 0–3 to uniwersalne kruszywo o równomiernej frakcji, które idealnie sprawdza się jako stabilna podsypka pod kostkę brukową i płyty oraz przy wyrównywaniu terenu i tworzeniu zapraw. Z kolei piasek płukany 0–2 charakteryzuje się wyjątkową czystością dzięki procesowi usuwania pyłów, co gwarantuje doskonałą przyczepność i gładką strukturę niezbędną przy profesjonalnych tynkach, wylewkach oraz pracach murarskich.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Rodzaj 2 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 fade-in-section delay-100 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/Images/coal.jpg"
+                             alt=""
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold text-white mb-1">Miał kamienny</h4>
+                        <span class="text-brand-red font-black text-lg block mb-3 border-b border-white/10 pb-3">Frakcja 0-2 mm</span>
+                        <p class="text-gray-400 text-sm">
+                            Drobne kruszywo łamane o uziarnieniu
+                            od 0 do 2 mm, powstające w procesie kruszenia skał. Charakteryzuje się ostrymi, nieregularnymi ziarnami, które zapewniają bardzo dobrą spoistość i stabilność po zagęszczeniu. Jest stosowany przy produkcji mieszanek mineralno-asfaltowych oraz w robotach drogowych. Miał kamienny 0/2 cechuje się wysoką nośnością i odpornością na obciążenia mechaniczne.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Rodzaj 3 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 fade-in-section delay-200 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Assets/Images/grys.jpg"
+                             alt=""
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold text-white mb-1">Żwiry płukane</h4>
+                        <span class="text-brand-red font-black text-lg block mb-3 border-b border-white/10 pb-3">Frakcja 2-32 mm</span>
+                        <p class="text-gray-400 text-sm">Frakcja 2–8 mm znajduje zastosowanie m.in. w produkcji betonu oraz jako materiał drenażowy i dekoracyjny. Żwir 8–16 mm jest często wykorzystywany do drenaży, fundamentów oraz w budownictwie drogowym. Frakcja 16–32 mm sprawdza się przy wykonywaniu podbudów, systemów odwadniających oraz jako warstwa filtracyjna.</p>
+                    </div>
+                </div>
+
+                <!-- Rodzaj 4 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 fade-in-section delay-300 group">
+                    <div class="h-48 overflow-hidden grayscale">
+                        <img src="Assets/Images/gravel.jpg"
+                             alt=""
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold text-white mb-1">Grysy łamane</h4>
+                        <span class="text-brand-red font-black text-lg block mb-3 border-b border-white/10 pb-3">Frakcja 2-16 mm</span>
+                        <p class="text-gray-400 text-sm">Kruszywo uzyskiwane w procesie mechanicznego kruszenia skał, charakteryzujące się ostrymi, nieregularnymi krawędziami. Dzięki swojej strukturze zapewniają bardzo dobrą przyczepność i stabilność w mieszankach budowlanych oraz drogowych. Frakcja 2–8 mm jest często stosowana w produkcji betonu oraz jako materiał dekoracyjny. Grysy 8–11 mm wykorzystywane są w budownictwie drogowym, przy wykonywaniu podbudów i nawierzchni asfaltowych. Frakcja 11–16 mm znajduje zastosowanie w konstrukcjach nośnych, drenażach oraz jako warstwa wykończeniowa nawierzchni.</p>
+                    </div>
+                </div>
+
+                <!-- Rodzaj 5 -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 fade-in-section delay-300 group">
+                    <div class="h-48 overflow-hidden grayscale">
+                        <img src="Assets/Images/humus.jpg"
+                             alt=""
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-bold text-white mb-1">Podbudowy i materiały sypkie</h4>
+                        <span class="text-brand-red font-black text-lg block mb-3 border-b border-white/10 pb-3">Frakcja 0-31,5 mm</span>
+                        <p class="text-gray-400 text-sm">Oferujemy szeroki wybór materiałów sypkich, od wytrzymałych podbudów 0–31,5 i uniwersalnych pospółek 0–16, które gwarantują doskonałą stabilizację podłoża, po ekologiczny kruszbet z recyklingu o wysokiej nośności. W naszej ofercie znajdziesz również żyzny humus idealny do zakładania ogrodów oraz dekoracyjne nadziarno norweskie, które dzięki swojej odporności i unikalnej kolorystyce stanowi trwałe wykończenie ścieżek i rabat.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informacje kontaktowe i Kalkulator dla Kruszyw -->
+            <div class="mt-16 bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm fade-in-section delay-200 flex flex-col md:flex-row items-center justify-between gap-8 relative z-20">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-white mb-2">Dział Kruszyw i Żwirowni</h3>
+                    <p class="text-gray-400 mb-6">Złóż zamówienie na kruszywo z transportem. Oblicz zapotrzebowanie za pomocą naszego kalkulatora i skontaktuj się z nami, aby potwierdzić wycenę i czas dostawy.</p>
+
+                    <div class="flex flex-col sm:flex-row gap-6 mb-2">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center shrink-0 shadow-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-gray-500 font-semibold uppercase tracking-wider">Telefon</span>
+                                <a href="tel:+48500123459" class="text-lg font-bold text-white hover:text-brand-red transition">+48 500 123 459</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center shrink-0 shadow-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-gray-500 font-semibold uppercase tracking-wider">Email (Kruszywa)</span>
+                                <a href="mailto:kruszywa@budtech-gdansk.pl" class="text-lg font-bold text-white hover:text-brand-red transition">kruszywa@budtech.pl</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-auto w-full flex flex-col gap-4 justify-center md:justify-end border-t md:border-t-0 md:border-l border-white/10 pt-8 md:pt-0 md:pl-8">
+                    <button onclick="openCalcModal()" class="inline-flex items-center justify-center gap-3 px-6 py-4 bg-gray-100 hover:bg-white text-brand-black rounded-lg font-bold transition shadow-xl hover:-translate-y-1 w-full sm:w-auto group">
+                        <i class="fa-solid fa-calculator text-brand-red group-hover:scale-110 transition-transform"></i> Kalkulator metrażu
+                    </button>
+                    <a href="contact.html" class="inline-flex items-center justify-center gap-3 px-6 py-4 bg-brand-red hover:bg-brand-darkRed text-white rounded-lg font-bold transition shadow-xl hover:-translate-y-1 w-full sm:w-auto">
+                        <i class="fa-solid fa-paper-plane"></i> Formularz
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja 3: Usługi układania z odnośnikiem -->
+    <section class="py-20 bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+
+                <!-- Treść -->
+                <div class="lg:w-1/2 fade-in-section">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-red/10 text-brand-red border border-brand-red/20 rounded-full text-sm font-semibold mb-6">
+                        <i class="fa-solid fa-road"></i> Dział Wykonawstwa
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-brand-black">Usługi układania mieszanek asfaltowych i betonowych</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Mamy surowiec, produkujemy technologię i na samym końcu – <strong>wbudowujemy ją we właściwe miejsce.</strong> Dysponujemy rozściełaczami z innowacyjnymi systemami niwelacji 3D, układając warstwy jezdne z milimetrową dokładnością.
+                    </p>
+
+                    <ul class="space-y-4 mb-10 text-gray-700 font-medium">
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center shrink-0 mt-0.5 mr-4">
+                                <i class="fa-solid fa-layer-group text-sm"></i>
+                            </div>
+                            <span>Kompleksowa budowa dróg lokalnych, wojewódzkich i autostrad w modelu "Zaprojektuj i Wybuduj".</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center shrink-0 mt-0.5 mr-4">
+                                <i class="fa-solid fa-plane-departure text-sm"></i>
+                            </div>
+                            <span>Wylewanie specjalistycznych nawierzchni betonowych na lotniskach, placach manewrowych i w centrach logistycznych.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-brand-red text-white flex items-center justify-center shrink-0 mt-0.5 mr-4">
+                                <i class="fa-solid fa-hammer text-sm"></i>
+                            </div>
+                            <span>Wymiany gruntu, frezowanie zniszczonych nawierzchni oraz prace brukarskie na dużą skalę.</span>
+                        </li>
+                    </ul>
+
+                    <a href="gallery.html" class="inline-flex items-center gap-3 px-8 py-4 bg-brand-black hover:bg-gray-800 text-white rounded-lg font-bold transition shadow-xl hover:-translate-y-1">
+                        Zobacz nasze dotychczasowe realizacje <i class="fa-solid fa-camera-retro"></i>
+                    </a>
+                </div>
+
+                <!-- Zdjęcie -->
+                <div class="lg:w-1/2 relative fade-in-section delay-100">
+                    <img src="https://images.unsplash.com/photo-1545459720-aac8509eb02c?q=80&w=1000&auto=format&fit=crop"
+                         alt=""
+                         class="rounded-2xl shadow-2xl relative z-10 w-full h-[450px] object-cover">
+                    <!-- Akcent graficzny pod spodem -->
+                    <div class="absolute -bottom-6 -right-6 w-3/4 h-3/4 bg-brand-red rounded-2xl z-0 hidden md:block border-4 border-white"></div>
+                </div>
+
+            </div>
+
+            <!-- Informacje kontaktowe dla usług układania -->
+            <div class="mt-16 bg-white border border-gray-200 rounded-2xl p-8 md:p-12 shadow-md fade-in-section delay-200 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-brand-black mb-2">Dział Wykonawstwa i Robót Drogowych</h3>
+
+                    <div class="flex flex-col sm:flex-row gap-6 mb-2">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-gray-500 font-semibold uppercase tracking-wider">Telefon</span>
+                                <a href="tel:+48500123460" class="text-lg font-bold text-brand-black hover:text-brand-red transition">+48 500 123 460</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-gray-500 font-semibold uppercase tracking-wider">Email (Wyceny)</span>
+                                <a href="mailto:wykonawstwo@budtech-gdansk.pl" class="text-lg font-bold text-brand-black hover:text-brand-red transition">wykonawstwo@budtech.pl</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-auto w-full flex justify-center md:justify-end border-t md:border-t-0 md:border-l border-gray-200 pt-8 md:pt-0 md:pl-8">
+                    <a href="contact.html?subject=Wycena%20Usług%20Układania" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-black hover:bg-gray-800 text-white rounded-lg font-bold transition shadow-xl hover:-translate-y-1 w-full md:w-auto">
+                        <i class="fa-solid fa-paper-plane text-brand-red"></i> Formularz wyceny
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja 4: Badania Laboratoryjne (CTA) -->
+    <section class="py-16 bg-white relative overflow-hidden border-b border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-r from-gray-900 to-brand-black text-white rounded-3xl p-10 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10">
+
+                <!-- Ikona w tle -->
+                <div class="absolute -top-10 -right-10 opacity-10 transform rotate-12 pointer-events-none">
+                    <i class="fa-solid fa-microscope text-[15rem]"></i>
+                </div>
+
+                <div class="relative z-10 md:w-2/3">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-12 h-12 bg-brand-red rounded-full flex items-center justify-center text-xl shadow-lg">
+                            <i class="fa-solid fa-flask"></i>
+                        </span>
+                        <h3 class="text-3xl font-bold">Laboratorium Badawczo-Drogowe</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6 text-lg">
+                        Nasze akredytowane laboratorium świadczy usługi nie tylko na potrzeby własne, ale również zewnętrznych inwestorów. Realizujemy odwierty w asfalcie, badania nośności gruntu (płyta VSS), czy dogłębną analizę składu ziarnowego kruszyw.
+                    </p>
+                    <a href="lab.html" class="inline-flex items-center gap-3 text-white font-bold text-lg hover:text-brand-red transition group">
+                        <span class="border-b-2 border-brand-red/40 group-hover:border-brand-red pb-1">Szczegółowa oferta badań i analiz</span>
+                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-2 transition text-brand-red"></i>
+                    </a>
+                </div>
+
+                <div class="relative z-10 md:w-1/3 flex justify-center md:justify-end">
+                    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=500&auto=format&fit=crop"
+                         alt=""
+                         class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full shadow-[0_0_30px_rgba(220,38,38,0.4)] border-4 border-gray-800 transform hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-8">
+
+                <div class="flex flex-col items-center md:items-start text-center md:text-left md:border-r border-gray-800 md:pr-8">
+                    <a href="index.html" class="inline-block mb-2 bg-white rounded-lg p-2">
+                        <img src="Assets/Images/logo.png" alt="Bituminium Sp. z o. o." class="h-8 w-auto object-contain">
+                    </a>
+                    <p class="text-gray-500 text-sm mb-6">Jakość. Technologia. Zaufanie.</p>
+
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <p class="font-bold text-gray-500 uppercase tracking-wider mb-2">Dane Rejestrowe</p>
+                        <p>Bituminium Sp. z o.o.</p>
+                        <p>ul. Długa 4B, 84-223 Linia</p>
+                        <p>NIP: 5882406987 &bull; REGON: 360164300</p>
+                        <p>KRS: 0000530836 &bull; Kapitał: 100 000 PLN</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start space-y-3 pt-2 md:border-r border-gray-800 md:px-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-1">Szybka Nawigacja</span>
+                    <a href="about.html" class="text-gray-400 hover:text-brand-red transition text-sm">O nas</a>
+                    <a href="service.html" class="text-brand-red transition text-sm font-bold">Oferta</a>
+                    <a href="lab.html" class="text-gray-400 hover:text-brand-red transition text-sm">Laboratorium</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-brand-red transition text-sm">Realizacje</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-brand-red transition text-sm">Kontakt</a>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end text-center md:text-right pt-2 md:pl-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-4">Kontakt do działów</span>
+
+                    <div class="space-y-4 mb-6 text-sm text-gray-400">
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Biuro Obsługi Klienta</strong>
+                            <a href="tel:+48500123456" class="hover:text-white transition">+48 500 123 456</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:biuro@budtech.pl" class="hover:text-white transition">biuro@budtech.pl</a>
+                        </div>
+
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Laboratorium</strong>
+                            <a href="tel:+48500123457" class="hover:text-white transition">+48 500 123 457</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:lab@budtech.pl" class="hover:text-white transition">lab@budtech.pl</a>
+                        </div>
+
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Dział Kadr (Rekrutacja)</strong>
+                            <a href="tel:+48500123458" class="hover:text-white transition">+48 500 123 458</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:kariera@budtech.pl" class="hover:text-white transition">kariera@budtech.pl</a>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-6 mt-auto">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2026 Bituminium Linia. Wszelkie prawa zastrzeżone. <br>
+                Projekt i Realizacja - Konrad Grubba.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Calculator Modal dla Kruszyw -->
+    <div id="calc-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden" onclick="if(event.target === this) closeCalcModal()">
+        <div id="calc-modal-content" class="bg-white rounded-2xl w-full max-w-lg shadow-2xl relative flex flex-col transform transition-all scale-95 opacity-0 duration-300">
+
+            <div class="flex justify-between items-center p-6 border-b border-gray-100">
+                <h3 class="text-2xl font-bold text-brand-black flex items-center gap-3">
+                    <span class="w-10 h-10 bg-brand-red/10 text-brand-red rounded-full flex items-center justify-center text-lg"><i class="fa-solid fa-calculator"></i></span>
+                    Kalkulator Kruszyw
+                </h3>
+                <button onclick="closeCalcModal()" class="text-gray-400 hover:text-brand-red transition text-2xl px-2">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="p-6">
+                <div class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Wybierz rodzaj kruszywa</label>
+                        <select id="calc-material" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition bg-gray-50">
+                            <option value="Piasek płukany 0-2 mm" data-density="1.6">Piasek płukany 0-2 mm</option>
+                            <option value="Żwir drobny 2-8 mm" data-density="1.65">Żwir drobny 2-8 mm</option>
+                            <option value="Żwir gruby 8-16 mm" data-density="1.7">Żwir gruby 8-16 mm</option>
+                            <option value="Mieszanka łamana 0-31,5 mm" data-density="1.8">Mieszanka łamana 0-31,5 mm</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Długość placu (m)</label>
+                            <input type="number" id="calc-length" min="0" step="0.1" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-red outline-none transition bg-gray-50" placeholder="np. 15.5">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Szerokość placu (m)</label>
+                            <input type="number" id="calc-width" min="0" step="0.1" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-red outline-none transition bg-gray-50" placeholder="np. 8">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Grubość warstwy (cm)</label>
+                        <input type="number" id="calc-depth" min="0" step="1" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-brand-red outline-none transition bg-gray-50" placeholder="np. 20">
+                    </div>
+
+                    <button onclick="calculateTonnage()" class="w-full bg-brand-black text-white font-bold py-4 rounded-lg hover:bg-gray-800 transition shadow-lg mt-2 flex justify-center items-center gap-2">
+                        Oblicz zapotrzebowanie
+                    </button>
+                </div>
+
+                <!-- Kontener na wynik (Początkowo ukryty) -->
+                <div id="calc-result-box" class="mt-6 bg-gray-50 border border-brand-red/20 rounded-xl p-5 hidden">
+                    <p class="text-sm font-semibold text-gray-500 mb-1 uppercase tracking-wide">Szacowane zapotrzebowanie:</p>
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <p class="text-4xl font-black text-brand-red"><span id="calc-result-value">0</span></p>
+                        <p class="text-xl text-gray-600 font-bold">ton</p>
+                    </div>
+                    <p class="text-xs text-gray-500 mb-5 italic"><i class="fa-solid fa-circle-info text-brand-red"></i> Wartość zawiera 10% zapasu technologicznego na zagęszczenie i straty materiału.</p>
+
+                    <a id="calc-order-btn" href="contact.html" class="flex items-center justify-center gap-2 w-full bg-brand-red text-white font-bold py-3.5 rounded-lg hover:bg-brand-darkRed transition shadow-md">
+                        <i class="fa-solid fa-paper-plane"></i> Zamów tę ilość
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

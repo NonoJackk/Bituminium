@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Bituminium - Infrastruktura i Budownictwo</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+    <!-- Tailwind CSS (Styling Framework) -->
+     <!--<script src="https://cdn.tailwindcss.com"></script>--> 
+    <link rel="stylesheet" href="Assets/CSS/tailwind.css" />
+
+    <!-- Font Awesome (Icons) -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="Assets/CSS/all.min.css" />
+
+    <!-- Google Fonts (Modern, Technical Font) -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="Assets/CSS/fonts.css" />
+
+    <!-- Konfiguracja kolorów Tailwind -->
+    <script src="Scripts/tailwind.js"></script>
+
+    <script src="Scripts/script.js" defer></script>
+    <script src="Scripts/map.js" defer></script>
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-gradient-to-b from-white/80 to-transparent text-white py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="Assets/Images/logo.png"
+                     alt="Bituminium"
+                     class="h-8 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="about.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">O nas</a>
+                <a href="service.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Oferta</a>
+                <a href="lab.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Laboratorium</a>
+                <a href="gallery.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Realizacje</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-red hover:bg-brand-darkRed rounded-full transition text-white shadow-lg">Kontakt</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars transition-transform duration-300"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden bg-white/90 backdrop-blur-md rounded-t-2xl rounded-b-2xl w-full absolute top-full left-0 border-t border-b border-gray-200 transition-all duration-300 ease-in-out opacity-0 invisible -translate-y-4 shadow-xl">
+            <div id="mobile-menu-inner" class="flex flex-col px-6 py-4 space-y-4 text-brand-black">
+                <a href="about.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">O nas</a>
+                <a href="service.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Oferta</a>
+                <a href="lab.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Laboratorium</a>
+                <a href="gallery.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Realizacje</a>
+                <a href="contact.html" class="block px-6 py-4 text-lg rounded-2xl text-white bg-brand-red font-bold text-center mt-2 transition shadow-md">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="relative pt-32 pb-20 bg-brand-black text-center px-6 overflow-hidden">
+        <!-- Abstract Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-brand-red rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-[-10%] left-[-5%] w-80 h-80 bg-white rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-3xl mx-auto fade-in-section">
+            <div class="inline-block bg-brand-red/20 text-brand-red border border-brand-red/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                Jesteśmy do Twojej dyspozycji
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Skontaktuj się z nami</h1>
+            <p class="text-gray-400 text-lg leading-relaxed">
+                Wybierz odpowiedni departament lub skorzystaj z poniższego formularza kontaktowego.
+                Nasi specjaliści odpowiedzą na Twoje zapytanie najszybciej jak to możliwe.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <section class="py-16 bg-gray-50 relative z-20 -mt-8">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <!-- Left Column: Departments Contact Info -->
+                <div class="lg:w-5/12 space-y-6 fade-in-section" style="animation-delay: 0.1s;">
+                    <h2 class="text-2xl font-bold text-brand-black mb-6 px-2">Departamenty i działy</h2>
+
+                    <!-- BOK / Zarząd -->
+                    <div class="dept-card bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-start gap-4 cursor-default">
+                        <div class="w-12 h-12 bg-gray-100 text-brand-red rounded-xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-brand-black mb-1">Biuro Obsługi Klienta / Inwestycje</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-3">Zarząd i tematy ogólne</p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-gray-400"></i> ul. Przemysłowa 55, 80-001 Gdańsk</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-gray-400"></i> <a href="tel:+48500123456" class="hover:text-brand-red transition">+48 500 123 456</a></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-gray-400"></i> <a href="mailto:biuro@budtech.pl" class="hover:text-brand-red transition">biuro@budtech.pl</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dział Sprzedaży -->
+                    <div class="dept-card bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-start gap-4 cursor-default">
+                        <div class="w-12 h-12 bg-gray-100 text-brand-red rounded-xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-brand-black mb-1">Dział Sprzedaży</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-3">Zakup kruszyw i mieszanek</p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-gray-400"></i> Kopalnia, ul. Przemysłowa 55, Gdańsk</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-gray-400"></i> <a href="tel:+48500123457" class="hover:text-brand-red transition">+48 500 123 457</a></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-gray-400"></i> <a href="mailto:sprzedaz@budtech.pl" class="hover:text-brand-red transition">sprzedaz@budtech.pl</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dział Wykonawstwa -->
+                    <div class="dept-card bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-start gap-4 cursor-default">
+                        <div class="w-12 h-12 bg-gray-100 text-brand-red rounded-xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-road-barrier"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-brand-black mb-1">Dział Wykonawstwa</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-3">Usługi układania nawierzchni</p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-gray-400"></i> Baza Sprzętowa, Gdańsk</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-gray-400"></i> <a href="tel:+48500123458" class="hover:text-brand-red transition">+48 500 123 458</a></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-gray-400"></i> <a href="mailto:wykonawstwo@budtech.pl" class="hover:text-brand-red transition">wykonawstwo@budtech.pl</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Laboratorium -->
+                    <div class="dept-card bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-start gap-4 cursor-default">
+                        <div class="w-12 h-12 bg-gray-100 text-brand-red rounded-xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-brand-black mb-1">Laboratorium Drogowe</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-3">Zlecenia laboratoryjne i ZKP</p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-gray-400"></i> Laboratorium Główne, Gdańsk</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-gray-400"></i> <a href="tel:+48500123459" class="hover:text-brand-red transition">+48 500 123 459</a></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-gray-400"></i> <a href="mailto:lab@budtech.pl" class="hover:text-brand-red transition">lab@budtech.pl</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dział Kadr -->
+                    <div class="dept-card bg-white p-6 rounded-2xl shadow-md border border-gray-100 flex items-start gap-4 cursor-default">
+                        <div class="w-12 h-12 bg-gray-100 text-brand-red rounded-xl flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-brand-black mb-1">Dział Kadr</h3>
+                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-3">Rekrutacja / Kandydat na pracę</p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p class="flex items-start gap-2"><i class="fa-solid fa-location-dot mt-1 text-gray-400"></i> Centrala: ul. Długa 4B, 84-223 Linia</p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-gray-400"></i> <a href="tel:+48500123460" class="hover:text-brand-red transition">+48 500 123 460</a></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-gray-400"></i> <a href="mailto:kariera@budtech.pl" class="hover:text-brand-red transition">kariera@budtech.pl</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="lg:w-7/12 fade-in-section" style="animation-delay: 0.2s;">
+                    <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 h-full">
+                        <h2 class="text-3xl font-bold text-brand-black mb-2">Wyślij wiadomość</h2>
+                        <p class="text-gray-500 mb-8">Wypełnij formularz, a zapytanie trafi bezpośrednio do wybranego działu.</p>
+
+                        <form onsubmit="event.preventDefault(); alert('Wiadomość została wysłana do wybranego działu! (Wersja demonstracyjna)');">
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Imię i Nazwisko / Firma <span class="text-brand-red">*</span></label>
+                                    <input type="text" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-brand-red focus:bg-white focus:ring-2 focus:ring-brand-red/20 transition" placeholder="np. Jan Kowalski">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Telefon kontaktowy <span class="text-brand-red">*</span></label>
+                                    <input type="tel" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-brand-red focus:bg-white focus:ring-2 focus:ring-brand-red/20 transition" placeholder="+48 ...">
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Adres e-mail <span class="text-brand-red">*</span></label>
+                                <input type="email" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-brand-red focus:bg-white focus:ring-2 focus:ring-brand-red/20 transition" placeholder="adres@email.com">
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Temat wiadomości (Wybierz dział) <span class="text-brand-red">*</span></label>
+                                <div class="relative">
+                                    <select required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-brand-red focus:bg-white focus:ring-2 focus:ring-brand-red/20 transition appearance-none cursor-pointer">
+                                        <option value="" disabled selected>Rozwiń i wybierz temat...</option>
+                                        <option value="inwestor">Inwestor (Biuro Obsługi Klienta)</option>
+                                        <option value="zakup_kruszyw">Zakup kruszyw (Dział Sprzedaży)</option>
+                                        <option value="zakup_mieszanek">Zakup mieszanek mineralno-asfaltowych (Dział Sprzedaży)</option>
+                                        <option value="usluga_ukladania">Usługa układania nawierzchni (Dział Wykonawstwa)</option>
+                                        <option value="zlecenie_lab">Zlecenie laboratoryjne (Laboratorium Drogowe)</option>
+                                        <option value="rekrutacja">Kandydat na pracę (Dział Kadr)</option>
+                                        <option value="inne">Inne (Biuro Obsługi Klienta)</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Treść wiadomości <span class="text-brand-red">*</span></label>
+                                <textarea required rows="5" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-brand-red focus:bg-white focus:ring-2 focus:ring-brand-red/20 transition resize-y" placeholder="Napisz w czym możemy pomóc. Jeśli dotyczy inwestycji, podaj lokalizację (np. Gdańsk, Wejherowo)..."></textarea>
+                            </div>
+
+                            <div class="mb-8 flex items-start gap-3">
+                                <input type="checkbox" required id="rodo" class="mt-1 w-4 h-4 text-brand-red border-gray-300 rounded focus:ring-brand-red cursor-pointer">
+                                <label for="rodo" class="text-xs text-gray-500 leading-relaxed cursor-pointer">
+                                    Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w celu udzielenia odpowiedzi na przesłane zapytanie. Więcej informacji w <a href="#" class="text-brand-red hover:underline">Polityce Prywatności</a>.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="w-full sm:w-auto px-10 py-4 bg-brand-red hover:bg-brand-darkRed text-white font-bold rounded-xl transition shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2">
+                                Wyślij zapytanie <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lokalizacje na Mapie -->
+    <section id="lokalizacje" class="py-16 bg-white relative z-20 border-t border-gray-100">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="text-center mb-10 fade-in-section">
+                <h2 class="text-3xl font-bold text-brand-black mb-4">Znajdź nas na mapie</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Wybierz interesującą Cię lokalizację z listy po lewej stronie, aby sprawdzić dokładny dojazd do naszej siedziby, laboratorium lub kopalni kruszyw.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-6 bg-gray-50 rounded-2xl p-4 md:p-6 shadow-sm border border-gray-100 fade-in-section" style="animation-delay: 0.1s;">
+
+                <!-- Przyciski Nawigacji Mapy -->
+                <div class="lg:w-1/3 flex flex-col gap-3">
+                    <button onclick="changeMap('siedziba', this)" class="map-btn w-full text-left px-6 py-4 rounded-xl font-bold bg-brand-red text-white shadow-md border border-transparent transition-all flex items-center justify-between group">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-building text-lg w-6 text-center"></i>
+                            <span>Siedziba (BOK)</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right opacity-100 text-white transition-opacity"></i>
+                    </button>
+
+                    <button onclick="changeMap('zwirownia', this)" class="map-btn w-full text-left px-6 py-4 rounded-xl font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all flex items-center justify-between group">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-truck-fast text-lg w-6 text-center"></i>
+                            <span>Żwirownia / Kopalnia</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right opacity-0 text-brand-red group-hover:opacity-100 transition-opacity"></i>
+                    </button>
+
+                    <button onclick="changeMap('produkcja', this)" class="map-btn w-full text-left px-6 py-4 rounded-xl font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all flex items-center justify-between group">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-road-barrier text-lg w-6 text-center"></i>
+                            <span>Produkcja / Baza</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right opacity-0 text-brand-red group-hover:opacity-100 transition-opacity"></i>
+                    </button>
+
+                    <button onclick="changeMap('laboratorium', this)" class="map-btn w-full text-left px-6 py-4 rounded-xl font-semibold bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 transition-all flex items-center justify-between group">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-flask text-lg w-6 text-center"></i>
+                            <span>Laboratorium Drogowe</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-right opacity-0 text-brand-red group-hover:opacity-100 transition-opacity"></i>
+                    </button>
+                </div>
+
+                <!-- Kontener Mapy (Google Maps Iframe) -->
+                <div class="lg:w-2/3 h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-inner border border-gray-200 bg-gray-200 relative">
+                    <!-- Default load is Siedziba -->
+                    <iframe id="gmap-iframe" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2319.431039445592!2d17.937869077022!3d54.455329091171784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fdeb194b672c1f%3A0x692cefb32642af0f!2sBITUMINIUM%20SP%20Z%20O%20O!5e0!3m2!1spl!2spl!4v1772014446381!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" class="transition-opacity duration-300"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black text-white py-12 border-t border-gray-800 mt-auto">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-8">
+
+                <div class="flex flex-col items-center md:items-start text-center md:text-left md:border-r border-gray-800 md:pr-8">
+                    <a href="index.html" class="inline-block mb-2 bg-white rounded-lg p-2 flex items-center gap-2">
+                        <div class="w-6 h-6 bg-brand-red rounded flex items-center justify-center text-white font-bold text-xs">B</div>
+                        <span class="font-bold text-gray-900">Bituminium</span>
+                    </a>
+                    <p class="text-gray-500 text-sm mb-6">Jakość. Technologia. Zaufanie.</p>
+
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <p class="font-bold text-gray-500 uppercase tracking-wider mb-2">Dane Rejestrowe</p>
+                        <p>Bituminium Sp. z o.o.</p>
+                        <p>ul. Długa 4B, 84-223 Linia</p>
+                        <p>NIP: 5882406987 &bull; REGON: 360164300</p>
+                        <p>KRS: 0000530836 &bull; Kapitał: 100 000 PLN</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start space-y-3 pt-2 md:border-r border-gray-800 md:px-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-1">Szybka Nawigacja</span>
+                    <a href="about.html" class="text-gray-400 hover:text-brand-red transition text-sm">O nas</a>
+                    <a href="service.html" class="text-gray-400 hover:text-brand-red transition text-sm">Oferta</a>
+                    <a href="lab.html" class="text-gray-400 hover:text-brand-red transition text-sm">Laboratorium</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-brand-red transition text-sm">Kontakt</a>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end text-center md:text-right pt-2 md:pl-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-4">Kontakt do działów</span>
+
+                    <div class="space-y-4 mb-6 text-sm text-gray-400">
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Biuro Obsługi Klienta</strong>
+                            <a href="tel:+48500123456" class="hover:text-white transition">+48 500 123 456</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:biuro@budtech.pl" class="hover:text-white transition">biuro@budtech.pl</a>
+                        </div>
+
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Laboratorium</strong>
+                            <a href="tel:+48500123459" class="hover:text-white transition">+48 500 123 459</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:lab@budtech.pl" class="hover:text-white transition">lab@budtech.pl</a>
+                        </div>
+
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Dział Kadr (Rekrutacja)</strong>
+                            <a href="tel:+48500123460" class="hover:text-white transition">+48 500 123 460</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:kariera@budtech.pl" class="hover:text-white transition">kariera@budtech.pl</a>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-6 mt-auto">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm flex flex-col items-center gap-1">
+                <span>&copy; 2026 Bituminium Linia. Wszelkie prawa zastrzeżone.</span>
+                <span>Projekt i Realizacja - Konrad Grubba.</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

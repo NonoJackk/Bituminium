@@ -1,0 +1,717 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nas | Infrastruktura i Budownictwo Drogowe</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+
+    <!-- Tailwind CSS (Styling Framework) -->
+     <!--<script src="https://cdn.tailwindcss.com"></script>--> 
+    <link rel="stylesheet" href="Assets/CSS/tailwind.css" />
+
+    <!-- Font Awesome (Icons) -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">--> 
+    <link rel="stylesheet" href="Assets/CSS/all.min.css" />
+
+    <!-- Google Fonts (Modern, Technical Font) -->
+    <!--<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">--> 
+    <link rel="stylesheet" href="Assets/CSS/fonts.css" />
+
+    <!-- Konfiguracja kolorów Tailwind -->
+    <script src="Scripts/tailwind.js"></script>
+
+    <script src="Scripts/script.js" defer></script>
+    <script src="Scripts/modal.js" defer></script>
+
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-gradient-to-b from-white/80 to-transparent text-white py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="Assets/Images/logo.png"
+                     alt="Bituminium"
+                     class="h-8 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="about.html" class="text-brand-red font-bold transition shadow-black drop-shadow-md border-b-2 border-brand-red">O nas</a>
+                <a href="service.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Oferta</a>
+                <a href="lab.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Laboratorium</a>
+                <a href="gallery.html" class="hover:text-brand-red transition shadow-black drop-shadow-md">Realizacje</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-red hover:bg-brand-darkRed rounded-full transition text-white shadow-lg">Kontakt</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars transition-transform duration-300"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden bg-white/90 backdrop-blur-md rounded-t-2xl rounded-b-2xl w-full absolute top-full left-0 border-t border-b border-gray-200 transition-all duration-300 ease-in-out opacity-0 invisible -translate-y-4 shadow-xl">
+            <div id="mobile-menu-inner" class="flex flex-col px-6 py-4 space-y-4 text-brand-black">
+                <a href="about.html" class="block px-6 py-4 text-lg rounded-2xl text-brand-red font-bold bg-gray-100 transition">O nas</a>
+                <a href="service.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Oferta</a>
+                <a href="lab.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Laboratorium</a>
+                <a href="gallery.html" class="block px-6 py-4 text-lg rounded-2xl hover:text-brand-red hover:bg-gray-100 transition">Realizacje</a>
+                <a href="contact.html" class="block px-6 py-4 text-lg rounded-2xl text-white bg-brand-red font-bold text-center mt-2 transition shadow-md">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Subpage Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center justify-center text-center px-6 overflow-hidden bg-brand-black">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 w-full h-full z-0">
+            <img src="Assets/Images/budynki.jpg"
+                 alt="Budowa drogi"
+                 class="object-cover w-full h-full opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-transparent z-10"></div>
+        </div>
+
+        <div class="max-w-4xl text-white fade-in-section relative z-20">
+            <div class="inline-block bg-brand-red text-white px-4 py-1 rounded-full text-sm font-bold mb-6 tracking-wider uppercase">Poznaj Bituminium</div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-xl">
+                Fundamenty, na których opiera się <span class="text-brand-red">innowacja</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md">
+                Jesteśmy liderem branży drogowej na Pomorzu. Od dekad wyznaczamy standardy jakości, łącząc nowoczesny sprzęt z wiedzą akademicką.
+            </p>
+        </div>
+    </header>
+
+    <!-- Prezentacja Wideo (Dynamic Video Section) -->
+    <section class="py-16 bg-brand-black border-b border-gray-800 relative z-30 -mt-10">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto bg-white/5 p-2 md:p-4 rounded-2xl shadow-2xl backdrop-blur-sm border border-white/10">
+                <!-- 16:9 Responsive Video Container with Thumbnail -->
+                <div class="relative w-full overflow-hidden rounded-xl pt-[56.25%] bg-black cursor-pointer group" onclick="loadVideo(this, 'https://www.youtube.com/embed/Pn28L7iglq0?si=2M1fNhFMRbNWjiaP?autoplay=1&rel=0')">
+                    <img src="Assets/Images/robotnik.jpg"
+                         alt="Miniaturka wideo korporacyjnego"
+                         class="absolute top-0 left-0 w-full h-full object-cover opacity-70 group-hover:opacity-50 transition duration-500 group-hover:scale-105">
+
+                    <div class="absolute inset-0 flex items-center justify-center z-10">
+                        <div class="w-20 h-20 md:w-24 md:h-24 bg-brand-red/90 text-white rounded-full flex items-center justify-center text-3xl md:text-4xl shadow-[0_0_30px_rgba(220,38,38,0.5)] transform group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-play ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 mt-6 text-sm uppercase tracking-widest font-semibold">Dynamiczny rozwój • Ciągła produkcja • Pełen profesjonalizm</p>
+        </div>
+    </section>
+
+    <!-- Misja i Cel -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Wizualizacja -->
+                <div class="lg:w-1/2 w-full fade-in-section">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop"
+                             alt="Wizja i planowanie inwestycji"
+                             class="rounded-lg shadow-2xl w-full object-cover h-[500px]">
+                        <div class="absolute -bottom-8 -right-8 w-48 h-48 bg-gray-100 rounded-lg -z-10 hidden md:block border-4 border-brand-red/20"></div>
+
+                        <!-- Pływający box z wartościami -->
+                        <div class="absolute bottom-8 -left-8 bg-brand-black text-white p-6 rounded-lg shadow-xl hidden md:block border-l-4 border-brand-red">
+                            <h4 class="font-bold text-lg mb-2">Nasze filary:</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li><i class="fa-solid fa-check text-brand-red mr-2"></i> Trwałość materiałów</li>
+                                <li><i class="fa-solid fa-check text-brand-red mr-2"></i> Terminowość realizacji</li>
+                                <li><i class="fa-solid fa-check text-brand-red mr-2"></i> Ochrona środowiska</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Treść -->
+                <div class="lg:w-1/2 w-full fade-in-section delay-100">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-brand-black">Nasza <span class="text-brand-red">Misja</span> i Cel</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Głównym celem Bituminium jest budowa zrównoważonej i bezpiecznej infrastruktury drogowej. Wierzymy, że droga to nie tylko asfalt i beton – to krwiobieg gospodarki i codzienne życie tysięcy ludzi.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Naszą misją jest ciągłe przesuwanie granic technologicznych. Nie ustajemy w poszukiwaniu nowych rozwiązań ekologicznych, optymalizacji zużycia energii w naszych otaczarniach oraz wprowadzaniu mieszanek redukujących hałas drogowy. Jesteśmy dumni, że nasze realizacje służą pokoleniom.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                            <i class="fa-solid fa-bullseye text-3xl text-brand-red mb-4"></i>
+                            <h3 class="font-bold text-lg mb-2 text-brand-black">Cel strategiczny</h3>
+                            <p class="text-sm text-gray-600">Dominacja technologiczna w regionie oraz minimalizacja śladu węglowego produkcji do 2030 roku.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                            <i class="fa-solid fa-handshake text-3xl text-brand-red mb-4"></i>
+                            <h3 class="font-bold text-lg mb-2 text-brand-black">Wartości</h3>
+                            <p class="text-sm text-gray-600">Partnerstwo, transparentność w biznesie i bezkompromisowe podejście do norm bezpieczeństwa (BHP).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologia i Laboratorium (Współpraca z PG) -->
+    <section class="py-20 relative bg-brand-black overflow-hidden text-white">
+        <!-- Tło -->
+        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2000&auto=format&fit=crop"
+                 class="w-full h-full object-cover mix-blend-overlay"
+                 alt="Laboratorium badawcze">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black to-transparent"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+
+                <div class="lg:w-1/2 fade-in-section">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-sm font-semibold mb-6">
+                        <i class="fa-solid fa-flask text-brand-red"></i> Innowacje & Badania
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Współpraca z <span class="text-brand-red">Politechniką Gdańską</span></h2>
+
+                    <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+                        Technologia wykorzystywana przy produkcji naszych mas to efekt ścisłej symbiozy biznesu z nauką. Nasze laboratorium badawczo-rozwojowe (R&D) operuje w bezpośrednim partnerstwie z wydziałami <strong>Politechniki Gdańskiej</strong>.
+                    </p>
+
+                    <ul class="space-y-4 mb-8 text-gray-300">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center mt-1 mr-4 shrink-0">
+                                <i class="fa-solid fa-microscope text-xs text-white"></i>
+                            </div>
+                            <span><strong>Zaawansowane analizy lepiszczy:</strong> Badania reologiczne asfaltów modyfikowanych polimerami, projektowane przez pracowników naukowych PG.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center mt-1 mr-4 shrink-0">
+                                <i class="fa-solid fa-layer-group text-xs text-white"></i>
+                            </div>
+                            <span><strong>Innowacyjne domieszki:</strong> Opracowywanie mieszanek z użyciem materiałów z recyklingu (destrukt asfaltowy - RAP) zachowujących pełne parametry nośności.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center mt-1 mr-4 shrink-0">
+                                <i class="fa-solid fa-graduation-cap text-xs text-white"></i>
+                            </div>
+                            <span><strong>Kształcenie kadr:</strong> Organizujemy staże i praktyki dla studentów Inżynierii Lądowej i Zarządzania, wspierając młodych inżynierów w wejściu na rynek pracy.</span>
+                        </li>
+                    </ul>
+
+                    <blockquote class="border-l-4 border-brand-red pl-6 py-2 italic text-gray-400 bg-white/5 rounded-r-lg">
+                        "Wymiana wiedzy między naszą otaczarnią a laboratoriami Politechniki Gdańskiej pozwala nam wyprzedzać rynkowe normy o co najmniej dekadę."
+                        <footer class="mt-2 text-sm text-brand-red font-bold">— Główny Technolog Bituminium</footer>
+                    </blockquote>
+
+                    <!-- Nowy przycisk CTA dla Laboratorium -->
+                    <div class="mt-8">
+                        <a href="lab.html" class="inline-flex items-center gap-2 px-8 py-4 bg-brand-red hover:bg-brand-darkRed text-white rounded-lg font-bold transition shadow-lg hover:-translate-y-1">
+                            Poznaj ofertę laboratorium <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 w-full fade-in-section delay-100">
+                    <!-- Nowy ulepszony układ na 4 zdjęcia (Staggered Grid) -->
+                    <div class="grid grid-cols-2 gap-4 sm:gap-6 items-center">
+                        <!-- Lewa kolumna (obniżona) -->
+                        <div class="flex flex-col gap-4 sm:gap-6 pt-8 sm:pt-12">
+                            <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=600&auto=format&fit=crop" alt="Praca w laboratorium" class="rounded-2xl shadow-2xl h-40 sm:h-56 object-cover w-full border border-white/10 transition-transform duration-500 hover:scale-105">
+                            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop" alt="Badania laboratoryjne" class="rounded-2xl shadow-2xl h-48 sm:h-64 object-cover w-full border border-white/10 transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <!-- Prawa kolumna (podniesiona) -->
+                        <div class="flex flex-col gap-4 sm:gap-6 pb-8 sm:pb-12">
+                            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=600&auto=format&fit=crop" alt="Sprzęt pomiarowy" class="rounded-2xl shadow-2xl h-48 sm:h-64 object-cover w-full border border-white/10 transition-transform duration-500 hover:scale-105">
+                            <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=600&auto=format&fit=crop" alt="Analiza danych na PG" class="rounded-2xl shadow-2xl h-40 sm:h-56 object-cover w-full border border-white/10 transition-transform duration-500 hover:scale-105">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia Firmy (Timeline) -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-black mb-4">Historia naszej firmy</h2>
+                <div class="w-20 h-1 bg-brand-red mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Od lokalnego wykonawcy do lidera technologii budowlanych na Pomorzu. Zobacz, jak rozwijaliśmy się na przestrzeni lat.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto relative fade-in-section">
+                <!-- Vertical Line -->
+                <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gray-200 z-0"></div>
+
+                <!-- Timeline Item 1 -->
+                <div class="relative z-10 mb-12 flex flex-col md:flex-row items-center justify-between w-full">
+                    <div class="hidden md:block md:w-5/12 text-right pr-8">
+                        <h3 class="text-xl font-bold text-brand-black">Założenie spółki</h3>
+                        <p class="text-gray-600 mt-2">Początki działalności w sektorze robót ziemnych i niewielkich prac brukarskich w województwie pomorskim.</p>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-brand-red border-4 border-white shadow flex items-center justify-center shrink-0 absolute left-0 md:left-1/2 transform -translate-x-0 md:-translate-x-1/2"></div>
+                    <div class="ml-12 md:ml-0 md:w-5/12 md:pl-8 text-left">
+                        <span class="text-3xl font-black text-gray-300 block mb-1">1996</span>
+                        <div class="md:hidden">
+                            <h3 class="text-xl font-bold text-brand-black">Założenie spółki</h3>
+                            <p class="text-gray-600 mt-2">Początki działalności w sektorze robót ziemnych i niewielkich prac brukarskich.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative z-10 mb-12 flex flex-col md:flex-row items-center justify-between w-full">
+                    <div class="ml-12 md:ml-0 md:w-5/12 text-left md:text-right md:pr-8 order-2 md:order-1">
+                        <span class="text-3xl font-black text-gray-300 block mb-1">2005</span>
+                        <div class="md:hidden">
+                            <h3 class="text-xl font-bold text-brand-black">Własna otaczarnia</h3>
+                            <p class="text-gray-600 mt-2">Uruchomienie pierwszej stacji produkcji mas bitumicznych. Skokowy wzrost potencjału wykonawczego.</p>
+                        </div>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-brand-red border-4 border-white shadow flex items-center justify-center shrink-0 absolute left-0 md:left-1/2 transform -translate-x-0 md:-translate-x-1/2 order-1 md:order-2"></div>
+                    <div class="hidden md:block md:w-5/12 pl-8 text-left order-3">
+                        <h3 class="text-xl font-bold text-brand-black">Własna otaczarnia</h3>
+                        <p class="text-gray-600 mt-2">Uruchomienie pierwszej stacji produkcji mas bitumicznych. Skokowy wzrost potencjału wykonawczego w Gdańsku i okolicach.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative z-10 mb-12 flex flex-col md:flex-row items-center justify-between w-full">
+                    <div class="hidden md:block md:w-5/12 text-right pr-8">
+                        <h3 class="text-xl font-bold text-brand-black">Laboratorium i Partnerstwo PG</h3>
+                        <p class="text-gray-600 mt-2">Otwarcie własnego certyfikowanego laboratorium. Nawiązanie oficjalnej współpracy z Politechniką Gdańską w celu optymalizacji mieszanek.</p>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-brand-red border-4 border-white shadow flex items-center justify-center shrink-0 absolute left-0 md:left-1/2 transform -translate-x-0 md:-translate-x-1/2"></div>
+                    <div class="ml-12 md:ml-0 md:w-5/12 md:pl-8 text-left">
+                        <span class="text-3xl font-black text-gray-300 block mb-1">2014</span>
+                        <div class="md:hidden">
+                            <h3 class="text-xl font-bold text-brand-black">Laboratorium i Partnerstwo PG</h3>
+                            <p class="text-gray-600 mt-2">Otwarcie certyfikowanego laboratorium i współpraca z Politechniką Gdańską.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 (Obecnie) -->
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between w-full">
+                    <div class="ml-12 md:ml-0 md:w-5/12 text-left md:text-right md:pr-8 order-2 md:order-1">
+                        <span class="text-3xl font-black text-brand-red block mb-1">Dziś</span>
+                        <div class="md:hidden">
+                            <h3 class="text-xl font-bold text-brand-black">Lider Technologii</h3>
+                            <p class="text-gray-600 mt-2">Dysponujemy najnowocześniejszą flotą maszyn, a nasze asfalty pokrywają najważniejsze arterie regionu.</p>
+                        </div>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-brand-black border-4 border-brand-red shadow flex items-center justify-center shrink-0 absolute left-[-4px] md:left-1/2 transform -translate-x-0 md:-translate-x-1/2 order-1 md:order-2">
+                        <i class="fa-solid fa-star text-white text-xs"></i>
+                    </div>
+                    <div class="hidden md:block md:w-5/12 pl-8 text-left order-3">
+                        <h3 class="text-xl font-bold text-brand-black">Lider Technologii</h3>
+                        <p class="text-gray-600 mt-2">Dysponujemy najnowocześniejszą flotą maszyn sterowanych systemami 3D, a nasze innowacyjne asfalty pokrywają najważniejsze arterie regionu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flota Maszyn (Videos Grid) -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-brand-red font-bold uppercase tracking-widest text-sm mb-2 block">Nasz Sprzęt</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-black mb-4">Nowoczesna i Niezawodna Flota</h2>
+                <div class="w-20 h-1 bg-brand-red mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Dysponujemy wysoce wyspecjalizowanym parkiem maszynowym. Ponad 50 maszyn, w tym zaawansowane rozkładarki, nowoczesne walce oscylacyjne oraz specjalistyczne termosy, skrapiarki i frezarki. Zobacz nasze maszyny w akcji.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+                <!-- Video Item 1 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 fade-in-section">
+                    <div class="relative w-full overflow-hidden pt-[56.25%] bg-black cursor-pointer group" onclick="loadVideo(this, 'https://www.youtube.com/embed/Pn28L7iglq0?si=2M1fNhFMRbNWjiaP')">
+                        <img src="Assets/Images/asfaltowka.jpg"
+                             alt="Rozściełacz Vögele"
+                             class="absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center z-10">
+                            <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-2xl shadow-lg transform group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-brand-black">Rozkładarki Dynapac</h3>
+                            <span class="px-3 py-1 bg-brand-red/10 text-brand-red text-xs font-bold rounded-full">Nawierzchnie</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Najwyższa precyzja układania masy bitumicznej dzięki zintegrowanym systemom niwelacji ultradźwiękowej i GPS. Pozwala na idealne wyprofilowanie spadków dróg ekspresowych.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Item 2 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 fade-in-section delay-100">
+                    <div class="relative w-full overflow-hidden pt-[56.25%] bg-black cursor-pointer group" onclick="loadVideo(this, 'https://www.youtube.com/embed/Pn28L7iglq0?si=2M1fNhFMRbNWjiaP')">
+                        <img src="Assets/Images/walec.jpg"
+                             alt="Walec drogowy"
+                             class="absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center z-10">
+                            <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-2xl shadow-lg transform group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-brand-black">Ciężkie walce Dynapac</h3>
+                            <span class="px-3 py-1 bg-brand-red/10 text-brand-red text-xs font-bold rounded-full">Zagęszczanie</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Technologia oscylacji zapewnia optymalne zagęszczenie warstw asfaltowych bez ryzyka uszkodzenia infrastruktury podziemnej. Niezastąpione przy budowie dróg w terenach miejskich.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Item 3 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 fade-in-section">
+                    <div class="relative w-full overflow-hidden pt-[56.25%] bg-black cursor-pointer group" onclick="loadVideo(this, 'https://www.youtube.com/embed/Pn28L7iglq0?si=2M1fNhFMRbNWjiaP')">
+                        <img src="Assets/Images/wywrotka.jpg"
+                             alt="Frezarka drogowa"
+                             class="absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center z-10">
+                            <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-2xl shadow-lg transform group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-brand-black">Wysokowydajne Frezarki Wirtgen</h3>
+                            <span class="px-3 py-1 bg-brand-red/10 text-brand-red text-xs font-bold rounded-full">Remonty</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Maszyny umożliwiające błyskawiczne frezowanie zużytych nawierzchni. Pozyskany destrukt trafia z powrotem do naszej otaczarni, wspierając ekologiczny recykling materiałów drogowych (RAP).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Item 4 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 fade-in-section">
+                    <div class="relative w-full overflow-hidden pt-[56.25%] bg-black cursor-pointer group" onclick="loadVideo(this, 'https://www.youtube.com/embed/Pn28L7iglq0?si=2M1fNhFMRbNWjiaP')">
+                        <img src="Assets/Images/wywrotka.jpg"
+                             alt="Frezarka drogowa"
+                             class="absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center z-10">
+                            <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-2xl shadow-lg transform group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-brand-black">Recykler do asfaltu Bagela</h3>
+                            <span class="px-3 py-1 bg-brand-red/10 text-brand-red text-xs font-bold rounded-full">Ekologia</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Nasz nowoczesny recykler to wydajna maszyna przekształcająca stary destrukt w pełnowartościową masę bitumiczną, co pozwala na błyskawiczną i ekologiczną naprawę dróg przy jednoczesnym radykalnym obniżeniu kosztów materiałowych.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Item 5 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 fade-in-section">
+                    <div class="relative w-full overflow-hidden pt-[56.25%] bg-black cursor-pointer group" onclick="loadVideo(this, 'https://www.youtube.com/embed/Pn28L7iglq0?si=2M1fNhFMRbNWjiaP')">
+                        <img src="Assets/Images/wywrotka.jpg"
+                             alt="Frezarka drogowa"
+                             class="absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center z-10">
+                            <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-2xl shadow-lg transform group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-brand-black">Termos do asfaltu Strassmayr</h3>
+                            <span class="px-3 py-1 bg-brand-red/10 text-brand-red text-xs font-bold rounded-full">Przechowywanie</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Nasz profesjonalny termos do asfaltu to zaawansowana maszyna utrzymująca optymalną temperaturę masy bitumicznej przez wiele godzin, co gwarantuje najwyższą jakość kładzionej nawierzchni oraz eliminuje straty materiałowe podczas transportu i przestojów.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Item 6 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 fade-in-section">
+                    <div class="relative w-full overflow-hidden pt-[56.25%] bg-black cursor-pointer group" onclick="loadVideo(this, 'https://www.youtube.com/embed/Pn28L7iglq0?si=2M1fNhFMRbNWjiaP')">
+                        <img src="Assets/Images/wywrotka.jpg"
+                             alt="Frezarka drogowa"
+                             class="absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center z-10">
+                            <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-2xl shadow-lg transform group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-brand-black">Skrapiarka emulsji Hydrog</h3>
+                            <span class="px-3 py-1 bg-brand-red/10 text-brand-red text-xs font-bold rounded-full">Wiązanie</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Nasza precyzyjna skrapiarka emulsji bitumicznej to niezawodne urządzenie zapewniające równomierne i szybkie pokrycie podłoża warstwą sczepną, co jest kluczowe dla trwałego połączenia starej nawierzchni z nową warstwą asfaltu.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Item 7 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 fade-in-section">
+                    <div class="relative w-full overflow-hidden pt-[56.25%] bg-black cursor-pointer group" onclick="loadVideo(this, 'https://www.youtube.com/embed/Pn28L7iglq0?si=2M1fNhFMRbNWjiaP')">
+                        <img src="Assets/Images/wywrotka.jpg"
+                             alt="Frezarka drogowa"
+                             class="absolute top-0 left-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 flex items-center justify-center z-10">
+                            <div class="w-16 h-16 bg-brand-red text-white rounded-full flex items-center justify-center text-2xl shadow-lg transform group-hover:scale-110 transition duration-300">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-brand-black">Koparko-ładowarki CAT</h3>
+                            <span class="px-3 py-1 bg-brand-red/10 text-brand-red text-xs font-bold rounded-full">Kopanie</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Nasze wszechstronne koparko-ładowarki to niezastąpione maszyny łączące potężną siłę kopania z dużą wydajnością załadunku, co pozwala na kompleksową obsługę robót ziemnych, transport materiałów sypkich oraz szybkie przygotowanie terenu pod inwestycję.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Image/Tech Item 8 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg border border-gray-100 fade-in-section delay-100 flex flex-col">
+                    <div class="relative h-full min-h-[250px] overflow-hidden group">
+                        <img src="Assets/Images/robota.jpg"
+                             alt="Otaczarnia mas bitumicznych"
+                             class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div class="text-white">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="px-3 py-1 bg-brand-red text-white text-xs font-bold rounded-full">Produkcja</span>
+                                    <h3 class="text-xl font-bold">Własna Otaczarnia Ammann</h3>
+                                </div>
+                                <p class="text-gray-300 text-sm">Serce naszej firmy. W pełni skomputeryzowany węzeł produkcyjny wytwarzający 300 ton najwyższej jakości mieszanki mineralno-asfaltowej na godzinę.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Realizacje Bitumiczne i Betonowe -->
+    <section class="py-20 relative bg-brand-black text-white overflow-hidden">
+        <!-- Tło Teksturowe -->
+        <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1621252179027-94459d27d3ee?q=80&w=2000&auto=format&fit=crop"
+                 class="w-full h-full object-cover grayscale"
+                 alt="Tekstura asfaltu">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-brand-red font-bold uppercase tracking-widest text-sm mb-2 block">Dział Wykonawstwa</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Kompleksowe Realizacje Drogowe</h2>
+                <div class="w-20 h-1 bg-brand-red mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-3xl mx-auto">
+                    Dysponujemy wykwalifikowanymi brygadami zdolnymi do prowadzenia projektów "zaprojektuj i wybuduj". Ostatnim etapem naszej produkcji jest wbudowanie materiału na docelowej inwestycji z milimetrową precyzją.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Karta 1: Asfalt -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 fade-in-section group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1545459720-aac8509eb02c?q=80&w=1000&auto=format&fit=crop"
+                             alt="Układanie nawierzchni asfaltowej"
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <i class="fa-solid fa-road-circle-check text-3xl text-brand-red mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Roboty Bitumiczne</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Budowa dróg wszystkich kategorii ruchu (KR1-KR7). Specjalizujemy się w układaniu cienkich warstw ścieralnych (BBTM) oraz nawierzchni antypoślizgowych, dbając o płaskość podłużną na najwyższym poziomie.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Karta 2: Beton -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 fade-in-section delay-100 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1000&auto=format&fit=crop"
+                             alt="Wylewanie betonu towarowego"
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <i class="fa-solid fa-cubes-stacked text-3xl text-brand-red mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Konstrukcje Betonowe</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Wylewanie betonów drogowych pod drogi szybkiego ruchu, obiekty mostowe oraz place logistyczne. Nasz beton towarowy charakteryzuje się podwyższoną mrozoodpornością (F150+) i odpornością na sól drogową.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Karta 3: Prace ziemne -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition duration-300 fade-in-section delay-200 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356f58?q=80&w=1000&auto=format&fit=crop"
+                             alt="Ciężki sprzęt na placu budowy"
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <i class="fa-solid fa-truck-pickup text-3xl text-brand-red mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Podbudowy i Bruk</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Kompleksowe przygotowanie gruntu: wymiana podłoża, makroniwelacja, stabilizacja cementem oraz rozległe prace brukarskie (ścieżki rowerowe, chodniki miejskie, parkingi wielkopowierzchniowe).
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Przycisk CTA dla działu wykonawstwa -->
+            <div class="mt-16 text-center fade-in-section delay-300">
+                <a href="service.html" class="inline-flex items-center gap-3 px-10 py-4 bg-transparent hover:bg-white text-white hover:text-brand-black border-2 border-brand-red hover:border-white rounded-lg font-bold transition duration-300 shadow-[0_0_20px_rgba(220,38,38,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)]">
+                    Zobacz pełny zakres usług <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Własne Kopalnie Kruszyw (Żwirownia) -->
+    <section class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+
+                <!-- Wizualizacja -->
+                <div class="lg:w-1/2 w-full fade-in-section">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop"
+                             alt="Wydobycie kruszyw i praca ładowarki"
+                             class="rounded-lg shadow-2xl w-full object-cover h-[450px]">
+                        <div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-black/5 rounded-lg -z-10 hidden md:block border-4 border-brand-red/20"></div>
+                    </div>
+                </div>
+
+                <!-- Treść -->
+                <div class="lg:w-1/2 w-full fade-in-section delay-100">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-red/10 text-brand-red border border-brand-red/20 rounded-full text-sm font-semibold mb-6">
+                        <i class="fa-solid fa-mountain"></i> Niezależność Surowcowa
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-brand-black">Własne Kopalnie Kruszyw</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Podstawą trwałej nawierzchni jest najwyższej jakości kruszywo. Posiadamy własne, perspektywiczne złoża żwiru i piasku na terenie Pomorza. Dzięki temu mamy pełną kontrolę nad łańcuchem dostaw surowców.
+                    </p>
+
+                    <ul class="space-y-4 mb-8 text-gray-600">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center mt-1 mr-4 shrink-0">
+                                <i class="fa-solid fa-gem text-xs text-white"></i>
+                            </div>
+                            <span><strong>Kruszywa łamane i uszlachetniane:</strong> Zautomatyzowane linie płuczące i przesiewające gwarantują idealne frakcje niezbędne do produkcji mas SMA oraz betonów konstrukcyjnych.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-brand-red flex items-center justify-center mt-1 mr-4 shrink-0">
+                                <i class="fa-solid fa-truck text-xs text-white"></i>
+                            </div>
+                            <span><strong>Własna logistyka transportowa:</strong> Zintegrowana flota pojazdów samowyładowczych optymalizuje dostawy z kopalni bezpośrednio na plac budowy lub na naszą otaczarnię.</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="service.html" class="inline-flex items-center gap-2 px-8 py-4 bg-brand-red hover:bg-brand-darkRed text-white rounded-lg font-bold transition shadow-lg hover:-translate-y-1">
+                            Sprawdź ofertę kruszyw <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Identyczny ze stroną główną) -->
+    <footer class="bg-brand-black text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 mb-8">
+
+                <div class="flex flex-col items-center md:items-start text-center md:text-left md:border-r border-gray-800 md:pr-8">
+                    <a href="index.html" class="inline-block mb-2 bg-white rounded-lg p-2">
+                        <img src="Assets/Images/logo.png" alt="Bituminium Sp. z o. o." class="h-8 w-auto object-contain">
+                    </a>
+                    <p class="text-gray-500 text-sm mb-6">Jakość. Technologia. Zaufanie.</p>
+
+                    <div class="text-xs text-gray-600 space-y-1">
+                        <p class="font-bold text-gray-500 uppercase tracking-wider mb-2">Dane Rejestrowe</p>
+                        <p>Bituminium Sp. z o.o.</p>
+                        <p>ul. Długa 4B, 84-223 Linia</p>
+                        <p>NIP: 5882406987 &bull; REGON: 360164300</p>
+                        <p>KRS: 0000530836 &bull; Kapitał: 100 000 PLN</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start space-y-3 pt-2 md:border-r border-gray-800 md:px-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-1">Szybka Nawigacja</span>
+                    <a href="about.html" class="text-brand-red transition text-sm font-bold">O nas</a>
+                    <a href="index.html#oferta" class="text-gray-400 hover:text-brand-red transition text-sm">Oferta</a>
+                    <a href="index.html#laboratorium" class="text-gray-400 hover:text-brand-red transition text-sm">Laboratorium</a>
+                    <a href="index.html#kontakt" class="text-gray-400 hover:text-brand-red transition text-sm">Kontakt</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-red transition text-sm">Polityka Prywatności</a>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end text-center md:text-right pt-2 md:pl-8">
+                    <span class="text-white font-bold uppercase tracking-wider text-xs mb-4">Kontakt do działów</span>
+
+                    <div class="space-y-4 mb-6 text-sm text-gray-400">
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Biuro Obsługi Klienta</strong>
+                            <a href="tel:+48500123456" class="hover:text-white transition">+48 500 123 456</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:biuro@budtech.pl" class="hover:text-white transition">biuro@budtech.pl</a>
+                        </div>
+
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Laboratorium</strong>
+                            <a href="tel:+48500123457" class="hover:text-white transition">+48 500 123 457</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:lab@budtech.pl" class="hover:text-white transition">lab@budtech.pl</a>
+                        </div>
+
+                        <div>
+                            <strong class="text-gray-200 block text-xs uppercase">Dział Kadr (Rekrutacja)</strong>
+                            <a href="tel:+48500123458" class="hover:text-white transition">+48 500 123 458</a>
+                            <span class="mx-1">|</span>
+                            <a href="mailto:kariera@budtech.pl" class="hover:text-white transition">kariera@budtech.pl</a>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-6 mt-auto">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2026 Bituminium Linia. Wszelkie prawa zastrzeżone. <br>
+                Projekt i Realizacja - Konrad Grubba.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
