@@ -1,4 +1,4 @@
-﻿// 4. Service Modal Logic with Interactive Gallery
+// 4. Service Modal Logic with Interactive Gallery
 const serviceDetails = {
     'asfalt': {
         title: "Produkcja Mieszanek Bitumicznych",
