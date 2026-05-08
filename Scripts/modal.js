@@ -3,7 +3,7 @@ const serviceDetails = {
     'asfalt': {
         title: "Produkcja Mieszanek Bitumicznych",
         icon: "fa-road",
-        coverImage: "https://images.unsplash.com/photo-1590240921869-7da2635a9f62?q=80&w=1000&auto=format&fit=crop",
+        coverImage: "Assets/Images/index_service_asfalt.webp",
         desc: "Nasza otaczarnia w Gdańsku to jeden z najnowocześniejszych zakładów na Pomorzu. Proces produkcji jest w pełni zautomatyzowany i sterowany komputerowo, co gwarantuje powtarzalność każdej partii materiału.",
         link: "service.html",
         features: [
@@ -14,16 +14,16 @@ const serviceDetails = {
             "Własny system dozowania dodatków uszlachetniających"
         ],
         images: [
-            "https://images.unsplash.com/photo-1590240921869-7da2635a9f62?q=80&w=400&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1625723044792-44de168af926?q=80&w=400&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1574360778004-633cb8e29202?q=80&w=400&auto=format&fit=crop"
+            "Assets/Images/index_service_asfalt1.webp",
+            "Assets/Images/index_service_asfalt2.webp",
+            "Assets/Images/index_service_asfalt3.webp"
         ],
         highlight: "Ścisła kontrola jakości każdej partii we współpracy z Politechniką Gdańską."
     },
     'nawierzchnie': {
         title: "Układanie Nawierzchni",
         icon: "fa-trowel-bricks",
-        coverImage: "https://images.unsplash.com/photo-1578844251758-2f71da645217?q=80&w=1000&auto=format&fit=crop",
+        coverImage: "Assets/Images/index_service_laying.webp",
         desc: "Dysponujemy wyspecjalizowanymi brygadami bitumicznymi wyposażonymi w najnowszy sprzęt marek Vögele i Hamm. Realizujemy zlecenia od ścieżek rowerowych po autostrady.",
         link: "service.html",
         features: [
@@ -34,9 +34,9 @@ const serviceDetails = {
             "Logistyka transportu masy termosami (utrzymanie temperatury)"
         ],
         images: [
-            "https://images.unsplash.com/photo-1578844251758-2f71da645217?q=80&w=400&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1573075175646-10e3f2255746?q=80&w=400&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1518113262615-56041e204c32?q=80&w=400&auto=format&fit=crop"
+            "Assets/Images/index_service_laying1.webp",
+            "Assets/Images/index_service_laying2.webp",
+            "Assets/Images/index_service_laying3.webp"
         ],
         highlight: "Gwarancja równości podłużnej i poprzecznej przewyższająca standardowe normy odbiorowe."
     },

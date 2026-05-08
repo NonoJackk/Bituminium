@@ -13,9 +13,9 @@ const galleryProjects = {
             "Czas realizacji robót bitumicznych: 3 miesiące"
         ],
         images: [
-            "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?q=80&w=1000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=1000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1590240921869-7da2635a9f62?q=80&w=1000&auto=format&fit=crop"
+            "Assets/Images/gallery_1_1.webp",
+            "Assets/Images/gallery_1_2.webp",
+            "Assets/Images/gallery_1_3.webp"
         ]
     },
     2: {
@@ -31,8 +31,8 @@ const galleryProjects = {
             "Technologia układania: Deskowa ze zbrojeniem rozproszonym"
         ],
         images: [
-            "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1000&auto=format&fit=crop"
+            "Assets/Images/gallery_2_1.webp",
+            "Assets/Images/gallery_2_2.webp"
         ]
     },
     3: {
@@ -48,9 +48,8 @@ const galleryProjects = {
             "Pełen nadzór laboratoryjny Bituminium"
         ],
         images: [
-            "https://images.unsplash.com/photo-1578844251758-2f71da645217?q=80&w=1000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1621252179027-94459d27d3ee?q=80&w=1000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1596237583626-d9756a1b023f?q=80&w=1000&auto=format&fit=crop"
+            "Assets/Images/gallery_3_1.webp",
+            "Assets/Images/gallery_3_2.webp"
         ]
     },
     4: {
@@ -66,8 +65,8 @@ const galleryProjects = {
             "Typ kluczowej mieszanki: SMA 11 PMB (polimeroasfalty)"
         ],
         images: [
-            "https://images.unsplash.com/photo-1590240921869-7da2635a9f62?q=80&w=1000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=1000&auto=format&fit=crop"
+            "Assets/Images/gallery_4_1.webp",
+            "Assets/Images/gallery_4_2.webp"
         ]
     },
     5: {
@@ -83,9 +82,8 @@ const galleryProjects = {
             "Współpraca z Konserwatorem Zabytków"
         ],
         images: [
-            "https://images.unsplash.com/photo-1596237583626-d9756a1b023f?q=80&w=1000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1000&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=1000&auto=format&fit=crop"
+            "Assets/Images/gallery_5_1.webp",
+            "Assets/Images/gallery_5_2.webp"
         ]
     },
 };
